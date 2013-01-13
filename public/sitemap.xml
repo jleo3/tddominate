@@ -1,15 +1,47 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://yoursite.com/</loc>
-        <lastmod>2013-01-13T14:03:14-05:00</lastmod>
+        <loc>
+            http://www.testdrivendomination.com/blog/2012/12/05/remap-resharper-keyboard-shortcuts/
+        </loc>
+        <lastmod>2013-01-13T18:04:21-05:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/archives/</loc>
-        <lastmod>2013-01-13T14:03:14-05:00</lastmod>
+        <loc>http://www.testdrivendomination.com/blog/2012/12/06/exceptionally-lazy/</loc>
+        <lastmod>2013-01-13T18:04:21-05:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/robots.txt</loc>
+        <loc>
+            http://www.testdrivendomination.com/blog/2012/12/18/expecting-and-handling-unexpected/
+        </loc>
+        <lastmod>2013-01-13T18:04:21-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.testdrivendomination.com/blog/2012/12/20/git-while-gittings-good/</loc>
+        <lastmod>2013-01-13T18:04:21-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.testdrivendomination.com/blog/2012/12/29/rails-from-thin-air-on-rhel-5/
+        </loc>
+        <lastmod>2013-01-13T18:04:21-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.testdrivendomination.com/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/
+        </loc>
+        <lastmod>2013-01-13T18:04:21-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.testdrivendomination.com/</loc>
+        <lastmod>2013-01-13T18:04:21-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.testdrivendomination.com/blog/archives/</loc>
+        <lastmod>2013-01-13T18:04:21-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.testdrivendomination.com/robots.txt</loc>
         <lastmod>2013-01-13T14:03:14-05:00</lastmod>
     </url>
 </urlset>
