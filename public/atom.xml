@@ -4,7 +4,7 @@
   <title><![CDATA[Test Driven Domination]]></title>
   <link href="http://www.testdrivendomination.com/atom.xml" rel="self"/>
   <link href="http://www.testdrivendomination.com/"/>
-  <updated>2013-01-13T18:15:50-05:00</updated>
+  <updated>2013-02-17T12:16:42-05:00</updated>
   <id>http://www.testdrivendomination.com/</id>
   <author>
     <name><![CDATA[Joe Leo]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Toward an MSpec Coding Convention]]></title>
+    <link href="http://www.testdrivendomination.com/blog/2013/01/20/toward-an-mspec-coding-convention/"/>
+    <updated>2013-01-20T00:17:00-05:00</updated>
+    <id>http://www.testdrivendomination.com/blog/2013/01/20/toward-an-mspec-coding-convention</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Git-Svn: For People Who Won't Let Go of Git]]></title>

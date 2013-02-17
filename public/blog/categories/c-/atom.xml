@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: C# | Test Driven Domination]]></title>
+  <link href="http://www.testdrivendomination.com/blog/categories/c-/atom.xml" rel="self"/>
+  <link href="http://www.testdrivendomination.com/"/>
+  <updated>2013-02-17T12:16:42-05:00</updated>
+  <id>http://www.testdrivendomination.com/</id>
+  <author>
+    <name><![CDATA[Joe Leo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Toward an MSpec Coding Convention]]></title>
+    <link href="http://www.testdrivendomination.com/blog/2013/01/20/toward-an-mspec-coding-convention/"/>
+    <updated>2013-01-20T00:17:00-05:00</updated>
+    <id>http://www.testdrivendomination.com/blog/2013/01/20/toward-an-mspec-coding-convention</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>

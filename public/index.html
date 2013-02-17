@@ -9,7 +9,8 @@
   <meta name="author" content="Joe Leo">
 
   
-  <meta name="description" content="I&#8217;ve been using Git-Svn for awhile now at work because after using Git every day at my old job, I just couldn&#8217;t go back. I&#8217;m &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,6 +22,7 @@
   <link rel="canonical" href="http://www.testdrivendomination.com/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
@@ -28,6 +30,8 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
 
   
 
@@ -35,12 +39,10 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">Test Driven Domination</a></h1>
-  
 </hgroup>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
@@ -57,11 +59,47 @@
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
-</nav>
+</nav> -->
   <div id="main">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/20/toward-an-mspec-coding-convention/">Toward an MSpec Coding Convention</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-20T00:17:00-05:00" pubdate data-updated="true">Jan 20<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -137,165 +175,33 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/20/git-while-gittings-good/">Git While the Gitting&#8217;s Good</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-20T00:00:00-05:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-I saw an opening and I went for it.<br /><br />After using git-svn for the past 5 months in a desperate attempt to keep my sanity in the face of a massive subversion repository, my team got a greenfield project. I honestly couldn&#8217;t help myself. &#8220;Ruby! Rails! Git! I&#8217;m on it!&#8221; So I became our&nbsp;<i>de facto </i>devops guy for a brand spanking new project, tasked with everything from configuring OpenSSH to installing Ruby and Rails on a severely locked down Windows system (many thanks once again to <a href="https://twitter.com/luislavena" target="_blank">Luis Lavena</a> and <a href="http://wayneeseguin.wordpress.com/" target="_blank">Wayne Seguin</a>&nbsp;for making this possible) to learning about <a href="http://code.google.com/p/tortoisegit/" target="_blank">TortoiseGit </a>to make our existing ToroiseSVN users feel comfortable.<br /><br />For Git we&#8217;re using a standard SSH provisioning system on a remote repository. But my company does not allow Git on their central servers so our repository is hosted on a flaky VM with no guaranteed backups or failovers. That won&#8217;t do. To solve this, I decided to add the entire repository to my existing SVN repository.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-Xk7_Yw5rDfQ/UNM88m-m-1I/AAAAAAAAAqE/zZi9Z9N6NlI/s1600/blog1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="47" src="http://1.bp.blogspot.com/-Xk7_Yw5rDfQ/UNM88m-m-1I/AAAAAAAAAqE/zZi9Z9N6NlI/s320/blog1.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-FCbucsxkE3s/UNM9AiCQw3I/AAAAAAAAAqM/vqC7xBRePIE/s1600/blog2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="40" src="http://3.bp.blogspot.com/-FCbucsxkE3s/UNM9AiCQw3I/AAAAAAAAAqM/vqC7xBRePIE/s640/blog2.png" width="640" /></a></div><br />Now that we&#8217;re official, I want to make sure that I keep backing things up. Here&#8217;s a script I adapted from an <a href="http://stackoverflow.com/questions/758916/how-to-make-subversion-or-any-program-perform-periodic-commits/759521#759521" target="_blank">answer on StackExchange</a>&nbsp;(thanks <a href="http://robertmassaioli.wordpress.com/" target="_blank">Robert Massaoli</a>):<br /><br /><br /><span style="font-family: Courier New, Courier, monospace;">#!/bin/bash</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: Courier New, Courier, monospace;">cd ..</span><br /><span style="font-family: Courier New, Courier, monospace;">while [ 1 ]</span><br /><span style="font-family: Courier New, Courier, monospace;">do</span><br /><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; svn add &#8211;force deployer.git/</span><br /><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; svn commit -m &#8220;GRT-0: Autocommitting deployer.git&#8221;</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; sleep 600</span><br /><span style="font-family: Courier New, Courier, monospace;">done</span><br /><div><br /></div><div><br /></div></div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/18/expecting-and-handling-unexpected/">Expecting (and Handling) the Unexpected</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-18T00:00:00-05:00" pubdate data-updated="true">Dec 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-In <a href="http://testdrivendomination.blogspot.com/2012/12/exceptionally-lazy.html" target="_blank">an earlier post</a> I mentioned that I&#8217;m creating an unhandled exception manager inspired by <a href="http://www.codeproject.com/Articles/7482/User-Friendly-Exception-Handling" target="_blank">Jeff Atwood&#8217;s Friendly Exception Manager</a>. A couple of days ago we found a bug that crashed our application in UAT. Much to my dismay, no friendly exception message whatsoever was displaying for the user under these circumstances. But how could this be? I&#8217;m catching all unhandled exceptions for this very purpose!<br /><br />Or am I? As it turns out, I was catching most, but not all, types of unhandled exceptions. Here&#8217;s where I started:<br /><pre class="csharpcode">        <span class="kwrd">public</span> <span class="kwrd">void</span> AddHandler()<br />        {<br />            Application.ThreadException += ThreadExceptionHandler;<br />        }</pre><pre class="csharpcode"></pre>This is pretty simple and is ideally the first method called in your application after initializing your unhandled exception manager. (Those intimately familiar with Jeff Atwood&#8217;s version will notice that his exception managers are purely static. None of my objects are static and there are all kinds of interfaces and small helper objects in place, but the spirit remains the same.) The ThreadException event deals specifically with the UI thread. The handler is where the user notification takes place. However, there are two items that are unaccounted for.<br /><br />First, my application is a combination of WPF and WinForms. The unhandled exception that crashed our application occurred in WinForms. Windows Forms errors do not behave the same way as ThreadExceptions by default and need to be told what to do.&nbsp;MSDN does&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.application.setunhandledexceptionmode(v=vs.100).aspx" target="_blank">a nice job of illustrating</a>&nbsp;this somewhat confusing concept.&nbsp;The second thing I neglected was defining the behavior of non-UI thread exceptions. Our application relies heavily on the <a href="http://msdn.microsoft.com/en-us/library/dd460717.aspx" target="_blank">TPL library</a>&nbsp;which gives us a big reason to be concerned with non-UI thread behavior. Luckily, we can relatively easily handle everything listed above with a few lines of code and an extra event handler (which, in my case, mirrors the functionality of the handler discussed above). The finished code looks like this:<br /><pre class="csharpcode">        <span class="kwrd">public</span> <span class="kwrd">void</span> AddHandler()<br />        {<br />            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);<br />            AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionHandler;<br />            Application.ThreadException += ThreadExceptionHandler;<br />        }</pre></div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/06/exceptionally-lazy/">Exceptionally Lazy</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-06T00:00:00-05:00" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<head><link href="csharp.css" rel="stylesheet" type="text/css"></link></head>I&#8217;m working on a .NET project and have been building an Unhandled Exception Manager in the <a href="http://www.codeproject.com/Articles/7482/User-Friendly-Exception-Handling" target="_blank">spirit of Jeff Atwood&#8217;s friendly exception handling</a>. If a user encounters an error that will crash our application, the Unhandled Exception Manager steps in first and issues a friendly message. In the background it emails the development team about the exception in as much detail as it can possibly grab.<br /><br />Recently some unwanted functionality gave me the opportunity to learn about lazy evaluation in C#. Look at the following code:<br /><!-- code formatted by http://manoli.net/csharpformat/ --><pre class="csharpcode"><span class="kwrd">return</span> MultiLine(<br /><span class="str">    "Date and Time:         "</span> + DateTime.Now,<br /><span class="str">    "Machine Name:          "</span> + Environment.MachineName,<br /><span class="str">    "IP Address:            "</span> + Dns.GetHostEntry(Dns.GetHostName()).AddressList[0],<br /><span class="str">    "Application Domain:    "</span> + AppDomain.CurrentDomain.FriendlyName,<br />    <span class="str">"Assembly Codebase:     "</span> + _assemblyInfo.CodeBase,<br />    <span class="str">"Assembly Full Name:    "</span> + _assemblyInfo.FullName,<br />    <span class="str">"Assembly Version:      "</span> + _assemblyInfo.Version,<br />    EnhancedStackTrace(<span class="kwrd">new</span> StackTrace(<span class="kwrd">true</span>))<br /> );</pre><br />Multiline simply aggregates the lines so that I can print pretty messages both in the code and in my emails:<br /><br /><!-- code formatted by http://manoli.net/csharpformat/ --><pre class="csharpcode"><span class="kwrd">static</span> <span class="kwrd">string</span> MultiLine(<span class="kwrd">params</span> <span class="kwrd">string</span>[] args)<br />{<br /><span class="kwrd">    return</span> <span class="kwrd">string</span>.Join(Environment.NewLine, args);<br />}</pre><br />If any one of these nested calls throws an exception, we get an <b>unhandled exception</b> in the <b>unhandled exception manager</b>. Not good. Wrapping the whole thing in a <span style="font-family: Courier New, Courier, monospace;">try/catch</span> prevents this but will not give us the maximum amount of information. If <span style="font-family: Courier New, Courier, monospace;">Dns.GetHostName</span> returns null, for example, it would still be nice to get the <span style="font-family: Courier New, Courier, monospace;">MachineName </span>and assembly information. The following MSpec test illustrates the problem:<br /><br /><!-- code formatted by http://manoli.net/csharpformat/ --> <br /><pre class="csharpcode">[Subject(<span class="kwrd">typeof</span> (ExceptionMessageBuilder), <span class="str">"SystemInfo"</span>)]<br /><span class="kwrd">class</span> when_an_exception_is_thrown : ExceptionMessageBuilderSpec<br />{<br /><span class="kwrd">    private</span> <span class="kwrd">static</span> Exception Exception;<br />    <span class="kwrd">private</span> <span class="kwrd">static</span> Version Version;<br /><br />    <span class="kwrd">private</span> Establish context = () =&gt;<br />        {<br />            Exception = <span class="kwrd">new</span> Exception();<br />            Version = <span class="kwrd">new</span> Version(1, 0, 0, 254);<br />            AssemblyInfo.WhenToldTo(x =&gt; x.FullName).Throw(Exception);<br />            AssemblyInfo.WhenToldTo(x =&gt; x.Version).Return(Version);<br />        };<br /><br />    <span class="kwrd">private</span> It will_handle_the_exception = () =&gt; ExceptionMessageBuilder.SystemInfo();<br />}</pre><br />I was able to make this test pass and extract the maximum amount of information about my application crash using lazy evaluation:<br /><br /><!-- code formatted by http://manoli.net/csharpformat/ --> <br /><pre class="csharpcode"><span class="kwrd">public</span> <span class="kwrd">string</span> SystemInfo()<br />{<br /><span class="kwrd">    return</span> MultiLazy(<span class="kwrd">new</span> List&lt;Lazy&lt;<span class="kwrd">string</span>&gt;&gt;<br />        {<span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Date and Time:         "</span> + AppDomain.CurrentDomain.FriendlyName),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Machine Name:          "</span> + Environment.MachineName),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"IP Address:            "</span> + Dns.GetHostEntry(Dns.GetHostName()).AddressList[0]),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Application Domain:    "</span> + AppDomain.CurrentDomain.FriendlyName),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Assembly Codebase:     "</span> + _assemblyInfo.CodeBase),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Assembly Full Name:    "</span> + _assemblyInfo.FullName),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Assembly Version:      "</span> + _assemblyInfo.Version),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; EnhancedStackTrace(<span class="kwrd">new</span> StackTrace(<span class="kwrd">true</span>)))<br />     });<br />}</pre><br />Using the <span style="font-family: Courier New, Courier, monospace;">Lazy&lt;&gt;</span> syntax, I can state my intentions without executing any of the code. Instead, the CLR compiles the code and waits for <span style="font-family: Courier New, Courier, monospace;">.Value</span> to be called on the arguments before executing. &nbsp;A change to our <span style="font-family: Courier New, Courier, monospace;">MultiLine </span>function demonstrates this in action:<br /><br /><!-- code formatted by http://manoli.net/csharpformat/ --> <br /><pre class="csharpcode"><span class="kwrd">static</span> <span class="kwrd">string</span> MultiLazy(List&lt;Lazy&lt;<span class="kwrd">string</span>&gt;&gt; args)<br />{<br /><span class="kwrd">    var</span> stringBuilder = <span class="kwrd">new</span> StringBuilder();<br />    <span class="kwrd">foreach</span> (<span class="kwrd">var</span> arg <span class="kwrd">in</span> args)<br />    {<br />        <span class="kwrd">try</span><br />        {<br />            stringBuilder.Append(arg.Value);<br />        }<br /><span class="rem">// ReSharper disable EmptyGeneralCatchClause -- we want all the information we can get.</span><br />        <span class="kwrd">catch</span> (Exception) {}<br /><span class="rem">// ReSharper restore EmptyGeneralCatchClause</span><br />        }<br />        <span class="kwrd">return</span> stringBuilder.ToString();<br />}</pre><br />Of course, this is my first attempt at lazy evaluation in C# and I&#8217;m open to other methods. Could this be cleaned up? Are there better approaches out there?<br /><br /></div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/05/remap-resharper-keyboard-shortcuts/">Remap Resharper Keyboard Shortcuts</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-05T00:00:00-05:00" pubdate data-updated="true">Dec 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<span style="font-family: Arial, Helvetica, sans-serif;">I recently spent 20 minutes figuring this out, so hopefully someone googling will be able to figure it out faster.</span><br /><div><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span></div><div><span style="font-family: Arial, Helvetica, sans-serif;">Using Resharper in Visual Studio 2010, I want to see the implementation of a method way more often than I want to see it&#8217;s definition. </span><span style="font-family: Courier New, Courier, monospace;">Ctrl +B</span><span style="font-family: Arial, Helvetica, sans-serif;"> will take you to the definition, but if you use lots of interfaces this command is less helpful. </span><span style="font-family: Courier New, Courier, monospace;">Ctrl + Shift + Alt + B</span><span style="font-family: Arial, Helvetica, sans-serif;"> will take you to the implementation of that method, where the business logic lives.</span></div><div><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span></div><div><span style="font-family: Arial, Helvetica, sans-serif;">So here&#8217;s how to replace GotoDefinition with GotoImplentation:</span></div><div><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span></div><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-kSTPtKI5TVs/UL-_7lKZq9I/AAAAAAAAAdY/-rt5dHN-v1w/s1600/goto_declaration.PNG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><span style="font-family: Arial, Helvetica, sans-serif;"><img border="0" height="189" src="http://2.bp.blogspot.com/-kSTPtKI5TVs/UL-_7lKZq9I/AAAAAAAAAdY/-rt5dHN-v1w/s320/goto_declaration.PNG" width="320" /></span></a></div><div><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span></div><div><ol><li><span style="font-family: Arial, Helvetica, sans-serif;">Open Tools -&gt; Options -&gt; Environment -&gt; Keyboard.</span></li><li><span style="font-family: Arial, Helvetica, sans-serif;">Under &#8220;Show commands containing:&#8221; type&nbsp;</span><span style="font-family: Courier New, Courier, monospace;">Resharper.Resharper_GotoDefinition</span><span style="font-family: Arial, Helvetica, sans-serif;">. Press the Remove button. Now search for&nbsp;</span><span style="font-family: Courier New, Courier, monospace;">Resharper.Resharper_GotoImplementation</span><span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;and do the same thing.</span></li><li><span style="font-family: Arial, Helvetica, sans-serif;">Under &#8220;Press shortcut keys,&#8221; press </span><span style="font-family: Courier New, Courier, monospace;">Ctrl + B</span><span style="font-family: Arial, Helvetica, sans-serif;">. Press the Assign button.</span></li><li><span style="font-family: Arial, Helvetica, sans-serif;">If you&#8217;d still like a shortcut for GotoDefinition, search again for&nbsp;</span><span style="font-family: Courier New, Courier, monospace;">Resharper.Resharper_GotoDefinition</span><span style="font-family: Arial, Helvetica, sans-serif;">, and follow step 3, this time pressing </span><span style="font-family: Courier New, Courier, monospace;">Ctrl + Shift + Alt + B</span><span style="font-family: Arial, Helvetica, sans-serif;">.</span></li><li><span style="font-family: Arial, Helvetica, sans-serif;">Press OK. You&#8217;re all set.</span></li></ol></div><div><span style="font-family: Arial, Helvetica, sans-serif;">UPDATE: 12/6</span><br /><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span><span style="font-family: Arial, Helvetica, sans-serif;">A friend Andreas had the following to add:</span><br /><br /><br /><div class="MsoNormal"><span lang="EN-GB" style="color: #1f497d; mso-ansi-language: EN-GB;"><span style="font-family: Arial, Helvetica, sans-serif;">Just two comments on the key sequence: We’ve actually got a term here in London for the Ctrl + Shift + Alt, because it’s such a mouthful when you’re trying to communicate it to someone who you’re pairing with. We call it (I kid you not) “banana”, cause, you know, the keys are kinda arranged in that shape. So you do occasionally hear people say things like “Banana – B” when coding. <o:p></o:p></span></span></div><div class="MsoNormal"><br /></div><div class="MsoNormal"><span lang="EN-GB" style="color: #1f497d; mso-ansi-language: EN-GB;"><span style="font-family: Arial, Helvetica, sans-serif;">On the topic of bananas – there’s a surprisingly little known shortcut in Resharper. Banana – A over a variable or parameter lets you trace the value origin or destination. So if you’re trying to find out where a parameter actually gets set (or which possible entry points you need to follow), rather than repeatedly following the chains with Alt+F7s or Ctrl-Bs. If you haven’t used it before give it a spin, makes tracing this stuff a lot less tedious.</span><o:p></o:p></span></div></div></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
-    <a href="/blog/archives">Blog Archives</a>
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+    
+    <a href="archives">Blog Archives</a>
     
   </div>
 </div>
 <aside class="sidebar">
   
     <section>
+  <ul id="recent_posts">
+      <li class="post">
+      <a href="http://www.testdrivendomination.com" alt="Home"><img src="/images/Home.png"></a>
+      <a href="http://www.testdrivendomination.com/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
+      <a href="mailto:" alt="E-Mail"><img src="/images/Envelope.png"></a>
+      <a href="http://www.testdrivendomination.com/atom.xml" alt="subscribe feed"><img src="/images/rss.png"></a>
+      </li>
+  </ul>
+</section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/20/toward-an-mspec-coding-convention/">Toward an MSpec Coding Convention</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/">Git-Svn: For People Who Won&#8217;t Let Go of Git</a>
@@ -311,10 +217,6 @@ In <a href="http://testdrivendomination.blogspot.com/2012/12/exceptionally-lazy.
     
       <li class="post">
         <a href="/blog/2012/12/18/expecting-and-handling-unexpected/">Expecting (and Handling) the Unexpected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/06/exceptionally-lazy/">Exceptionally Lazy</a>
       </li>
     
   </ul>
