@@ -9,8 +9,7 @@
   <meta name="author" content="Joe Leo">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="I&#8217;ve been using Git-Svn for awhile now at work because after using Git every day at my old job, I just couldn&#8217;t go back. I&#8217;m &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,42 +63,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/20/toward-an-mspec-coding-convention/">Toward an MSpec Coding Convention</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-20T00:17:00-05:00" pubdate data-updated="true">Jan 20<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -175,6 +138,43 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/20/git-while-gittings-good/">Git While the Gitting&#8217;s Good</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-20T00:00:00-05:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+I saw an opening and I went for it.<br /><br />After using git-svn for the past 5 months in a desperate attempt to keep my sanity in the face of a massive subversion repository, my team got a greenfield project. I honestly couldn&#8217;t help myself. &#8220;Ruby! Rails! Git! I&#8217;m on it!&#8221; So I became our&nbsp;<i>de facto </i>devops guy for a brand spanking new project, tasked with everything from configuring OpenSSH to installing Ruby and Rails on a severely locked down Windows system (many thanks once again to <a href="https://twitter.com/luislavena" target="_blank">Luis Lavena</a> and <a href="http://wayneeseguin.wordpress.com/" target="_blank">Wayne Seguin</a>&nbsp;for making this possible) to learning about <a href="http://code.google.com/p/tortoisegit/" target="_blank">TortoiseGit </a>to make our existing ToroiseSVN users feel comfortable.<br /><br />For Git we&#8217;re using a standard SSH provisioning system on a remote repository. But my company does not allow Git on their central servers so our repository is hosted on a flaky VM with no guaranteed backups or failovers. That won&#8217;t do. To solve this, I decided to add the entire repository to my existing SVN repository.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-Xk7_Yw5rDfQ/UNM88m-m-1I/AAAAAAAAAqE/zZi9Z9N6NlI/s1600/blog1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="47" src="http://1.bp.blogspot.com/-Xk7_Yw5rDfQ/UNM88m-m-1I/AAAAAAAAAqE/zZi9Z9N6NlI/s320/blog1.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-FCbucsxkE3s/UNM9AiCQw3I/AAAAAAAAAqM/vqC7xBRePIE/s1600/blog2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="40" src="http://3.bp.blogspot.com/-FCbucsxkE3s/UNM9AiCQw3I/AAAAAAAAAqM/vqC7xBRePIE/s640/blog2.png" width="640" /></a></div><br />Now that we&#8217;re official, I want to make sure that I keep backing things up. Here&#8217;s a script I adapted from an <a href="http://stackoverflow.com/questions/758916/how-to-make-subversion-or-any-program-perform-periodic-commits/759521#759521" target="_blank">answer on StackExchange</a>&nbsp;(thanks <a href="http://robertmassaioli.wordpress.com/" target="_blank">Robert Massaoli</a>):<br /><br /><br /><span style="font-family: Courier New, Courier, monospace;">#!/bin/bash</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: Courier New, Courier, monospace;">cd ..</span><br /><span style="font-family: Courier New, Courier, monospace;">while [ 1 ]</span><br /><span style="font-family: Courier New, Courier, monospace;">do</span><br /><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; svn add &#8211;force deployer.git/</span><br /><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; svn commit -m &#8220;GRT-0: Autocommitting deployer.git&#8221;</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; sleep 600</span><br /><span style="font-family: Courier New, Courier, monospace;">done</span><br /><div><br /></div><div><br /></div></div>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -200,10 +200,6 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/01/20/toward-an-mspec-coding-convention/">Toward an MSpec Coding Convention</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/">Git-Svn: For People Who Won&#8217;t Let Go of Git</a>
       </li>
     
@@ -217,6 +213,10 @@
     
       <li class="post">
         <a href="/blog/2012/12/18/expecting-and-handling-unexpected/">Expecting (and Handling) the Unexpected</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/exceptionally-lazy/">Exceptionally Lazy</a>
       </li>
     
   </ul>
