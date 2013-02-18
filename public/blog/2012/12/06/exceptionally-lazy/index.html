@@ -1,289 +1,155 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Exceptionally Lazy - Test Driven Domination</title>
-  <meta name="author" content="Joe Leo">
+	<meta charset="utf-8">
+	<title>Exceptionally Lazy - Test Driven Domination</title>
+    <meta name="author" content="Joe Leo">
+    
+	<meta name="description" content="I&#8217;m working on a .NET project and have been building an Unhandled Exception Manager in the spirit of Jeff Atwood&#8217;s friendly exception &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
-  <meta name="description" content="I&#8217;m working on a .NET project and have been building an Unhandled Exception Manager in the spirit of Jeff Atwood&#8217;s friendly exception &hellip;">
-  
+	<link href="/atom.xml" rel="alternate" title="Test Driven Domination" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.ico" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-  
-  <link rel="canonical" href="http://www.testdrivendomination.com/blog/2012/12/06/exceptionally-lazy/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Test Driven Domination" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
 
-
-  
-
+    <!-- remove or comment it to disable ajaxification -->   
+    <script src="/javascripts/ajaxify.js"></script>
+   
+    
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-</hgroup>
+
+<body>
+    <div id="wrapper">
+    <header id="header" class="inner"><!-- for more effects see _animate.scss -->
+<h1 class="animated bounceInDown">
+    <div id="headerbg">
+        Joe Leo
+    </div>
+</h1>
+<br>
+
+<ul id="social-links" style="text-align:center">
+  
+  <!-- GitHub -->
+  <li>
+  <a href="https://github.com/jleo3" class="github" title="Github"></a>
+  </li>
+  
+  
+  
+  
+  <!-- Twitter -->
+  <li>
+  <a href="http://www.twitter.com/jleo3" class="twitter" title="Twitter"></a>
+  </li>
+  
+  
+  
+  
+  
+</ul>
+
+
+<!-- use full url including 'index.html' for navigation bar if you are using ajax -->
+<ul id="nav">
+	<li id="ajax"><a href="/index.html">Home</a></li>
+	<li id="ajax"><a href="/blog/archives/index.html">Archives</a></li>
+    <li><a href="/atom.xml">RSS</a></li>
+    
+    <li>
+    <div id="dark">
+        <form method="get" action="/search.html" id="search">
+            <input name="query" type="text" placeholder="Search..." x-webkit-speech />
+        </form>
+    </div>
+    </li>
+        
+</ul>
+
+
+
 
 </header>
-  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:www.testdrivendomination.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
 
-</nav> -->
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
-    
-      <h1 class="entry-title">Exceptionally Lazy</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-06T00:00:00-05:00" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><div class='post'>
+<div id="toload">
+<!-- begin toload --> 
+    <div id="content" class="inner">
+        <article class="post">
+	<h2 class="title">Exceptionally Lazy</h2>
+	<div class="entry-content"><div class='post'>
 <head><link href="csharp.css" rel="stylesheet" type="text/css"></link></head>I&#8217;m working on a .NET project and have been building an Unhandled Exception Manager in the <a href="http://www.codeproject.com/Articles/7482/User-Friendly-Exception-Handling" target="_blank">spirit of Jeff Atwood&#8217;s friendly exception handling</a>. If a user encounters an error that will crash our application, the Unhandled Exception Manager steps in first and issues a friendly message. In the background it emails the development team about the exception in as much detail as it can possibly grab.<br /><br />Recently some unwanted functionality gave me the opportunity to learn about lazy evaluation in C#. Look at the following code:<br /><!-- code formatted by http://manoli.net/csharpformat/ --><pre class="csharpcode"><span class="kwrd">return</span> MultiLine(<br /><span class="str">    "Date and Time:         "</span> + DateTime.Now,<br /><span class="str">    "Machine Name:          "</span> + Environment.MachineName,<br /><span class="str">    "IP Address:            "</span> + Dns.GetHostEntry(Dns.GetHostName()).AddressList[0],<br /><span class="str">    "Application Domain:    "</span> + AppDomain.CurrentDomain.FriendlyName,<br />    <span class="str">"Assembly Codebase:     "</span> + _assemblyInfo.CodeBase,<br />    <span class="str">"Assembly Full Name:    "</span> + _assemblyInfo.FullName,<br />    <span class="str">"Assembly Version:      "</span> + _assemblyInfo.Version,<br />    EnhancedStackTrace(<span class="kwrd">new</span> StackTrace(<span class="kwrd">true</span>))<br /> );</pre><br />Multiline simply aggregates the lines so that I can print pretty messages both in the code and in my emails:<br /><br /><!-- code formatted by http://manoli.net/csharpformat/ --><pre class="csharpcode"><span class="kwrd">static</span> <span class="kwrd">string</span> MultiLine(<span class="kwrd">params</span> <span class="kwrd">string</span>[] args)<br />{<br /><span class="kwrd">    return</span> <span class="kwrd">string</span>.Join(Environment.NewLine, args);<br />}</pre><br />If any one of these nested calls throws an exception, we get an <b>unhandled exception</b> in the <b>unhandled exception manager</b>. Not good. Wrapping the whole thing in a <span style="font-family: Courier New, Courier, monospace;">try/catch</span> prevents this but will not give us the maximum amount of information. If <span style="font-family: Courier New, Courier, monospace;">Dns.GetHostName</span> returns null, for example, it would still be nice to get the <span style="font-family: Courier New, Courier, monospace;">MachineName </span>and assembly information. The following MSpec test illustrates the problem:<br /><br /><!-- code formatted by http://manoli.net/csharpformat/ --> <br /><pre class="csharpcode">[Subject(<span class="kwrd">typeof</span> (ExceptionMessageBuilder), <span class="str">"SystemInfo"</span>)]<br /><span class="kwrd">class</span> when_an_exception_is_thrown : ExceptionMessageBuilderSpec<br />{<br /><span class="kwrd">    private</span> <span class="kwrd">static</span> Exception Exception;<br />    <span class="kwrd">private</span> <span class="kwrd">static</span> Version Version;<br /><br />    <span class="kwrd">private</span> Establish context = () =&gt;<br />        {<br />            Exception = <span class="kwrd">new</span> Exception();<br />            Version = <span class="kwrd">new</span> Version(1, 0, 0, 254);<br />            AssemblyInfo.WhenToldTo(x =&gt; x.FullName).Throw(Exception);<br />            AssemblyInfo.WhenToldTo(x =&gt; x.Version).Return(Version);<br />        };<br /><br />    <span class="kwrd">private</span> It will_handle_the_exception = () =&gt; ExceptionMessageBuilder.SystemInfo();<br />}</pre><br />I was able to make this test pass and extract the maximum amount of information about my application crash using lazy evaluation:<br /><br /><!-- code formatted by http://manoli.net/csharpformat/ --> <br /><pre class="csharpcode"><span class="kwrd">public</span> <span class="kwrd">string</span> SystemInfo()<br />{<br /><span class="kwrd">    return</span> MultiLazy(<span class="kwrd">new</span> List&lt;Lazy&lt;<span class="kwrd">string</span>&gt;&gt;<br />        {<span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Date and Time:         "</span> + AppDomain.CurrentDomain.FriendlyName),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Machine Name:          "</span> + Environment.MachineName),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"IP Address:            "</span> + Dns.GetHostEntry(Dns.GetHostName()).AddressList[0]),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Application Domain:    "</span> + AppDomain.CurrentDomain.FriendlyName),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Assembly Codebase:     "</span> + _assemblyInfo.CodeBase),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Assembly Full Name:    "</span> + _assemblyInfo.FullName),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; <span class="str">"Assembly Version:      "</span> + _assemblyInfo.Version),<br />         <span class="kwrd">new</span> Lazy&lt;<span class="kwrd">string</span>&gt;(() =&gt; EnhancedStackTrace(<span class="kwrd">new</span> StackTrace(<span class="kwrd">true</span>)))<br />     });<br />}</pre><br />Using the <span style="font-family: Courier New, Courier, monospace;">Lazy&lt;&gt;</span> syntax, I can state my intentions without executing any of the code. Instead, the CLR compiles the code and waits for <span style="font-family: Courier New, Courier, monospace;">.Value</span> to be called on the arguments before executing. &nbsp;A change to our <span style="font-family: Courier New, Courier, monospace;">MultiLine </span>function demonstrates this in action:<br /><br /><!-- code formatted by http://manoli.net/csharpformat/ --> <br /><pre class="csharpcode"><span class="kwrd">static</span> <span class="kwrd">string</span> MultiLazy(List&lt;Lazy&lt;<span class="kwrd">string</span>&gt;&gt; args)<br />{<br /><span class="kwrd">    var</span> stringBuilder = <span class="kwrd">new</span> StringBuilder();<br />    <span class="kwrd">foreach</span> (<span class="kwrd">var</span> arg <span class="kwrd">in</span> args)<br />    {<br />        <span class="kwrd">try</span><br />        {<br />            stringBuilder.Append(arg.Value);<br />        }<br /><span class="rem">// ReSharper disable EmptyGeneralCatchClause -- we want all the information we can get.</span><br />        <span class="kwrd">catch</span> (Exception) {}<br /><span class="rem">// ReSharper restore EmptyGeneralCatchClause</span><br />        }<br />        <span class="kwrd">return</span> stringBuilder.ToString();<br />}</pre><br />Of course, this is my first attempt at lazy evaluation in C# and I&#8217;m open to other methods. Could this be cleaned up? Are there better approaches out there?<br /><br /></div>
 </div>
 
-
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Joe Leo</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-06T00:00:00-05:00" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.testdrivendomination.com/blog/2012/12/06/exceptionally-lazy/" data-via="jleo3" data-counturl="http://www.testdrivendomination.com/blog/2012/12/06/exceptionally-lazy/" >Tweet</a>
-  
-  
-  <div class="g-plusone" data-size="medium"></div>
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
+<div class="meta">
+	
 </div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/12/05/remap-resharper-keyboard-shortcuts/" title="Previous Post: Remap Resharper Keyboard Shortcuts">&laquo; Remap Resharper Keyboard Shortcuts</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2012/12/18/expecting-and-handling-unexpected/" title="Next Post: Expecting (and Handling) the Unexpected">Expecting (and Handling) the Unexpected &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
 
-<aside class="sidebar">
-  
-    <section>
-  <ul id="recent_posts">
-      <li class="post">
-      <a href="http://www.testdrivendomination.com" alt="Home"><img src="/images/Home.png"></a>
-      <a href="http://www.testdrivendomination.com/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
-      <a href="mailto:" alt="E-Mail"><img src="/images/Envelope.png"></a>
-      <a href="http://www.testdrivendomination.com/atom.xml" alt="subscribe feed"><img src="/images/rss.png"></a>
-      </li>
-  </ul>
-</section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/">Git-Svn: For People Who Won't Let Go of Git</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/29/rails-from-thin-air-on-rhel-5/">Rails from Thin Air on RHEL 5</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/20/git-while-gittings-good/">Git While The Gitting's Good</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/18/expecting-and-handling-unexpected/">Expecting (and Handling) the Unexpected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/06/exceptionally-lazy/">Exceptionally Lazy</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/jleo3">@jleo3</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'jleo3',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("jleo3", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/jleo3" class="twitter-follow-button" data-show-count="false">Follow @jleo3</a>
-  
-</section>
-
-
-
-
-
-  
-</aside>
 
 
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Joe Leo -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+    <footer id="footer">
+    <div style="display:inline">
+    Copyright &copy; 2013
 
-</footer>
-  
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    Joe Leo
+. Powered by <a href="http://octopress.org">Octopress</a> | 
+    Theme <a href="http://github.com/panks/fabric">fabric</a> by <a href="http://panks.me">Pankaj Kumar</a>
+</div>
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
+    </footer>
+    <script src="/javascripts/fabric.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
 
 
 
 
+
+
+
+<!-- end toload --> 
+</div>
+</div>
+<script src="/javascripts/jquery.ui.totop.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+;(function($){$().UItoTop({easingType:'easeOutCirc'});})(jQuery); 
+/*]]>*/
+</script><!-- remove it to remove the scroll to top button -->
 </body>
 </html>

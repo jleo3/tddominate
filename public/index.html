@@ -1,81 +1,106 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Test Driven Domination</title>
-  <meta name="author" content="Joe Leo">
+	<meta charset="utf-8">
+	<title>Test Driven Domination</title>
+    <meta name="author" content="Joe Leo">
+    
+	<meta name="description" content="Published on: Jan 3rd, 2013 Tags: I&#8217;ve been using Git-Svn for awhile now at work because after using Git every day at my old job, I just &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
-  <meta name="description" content="I&#8217;ve been using Git-Svn for awhile now at work because after using Git every day at my old job, I just couldn&#8217;t go back. I&#8217;m &hellip;">
-  
+	<link href="/atom.xml" rel="alternate" title="Test Driven Domination" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.ico" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-  
-  <link rel="canonical" href="http://www.testdrivendomination.com/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Test Driven Domination" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
 
-
-  
-
+    <!-- remove or comment it to disable ajaxification -->   
+    <script src="/javascripts/ajaxify.js"></script>
+   
+    
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-</hgroup>
+
+<body>
+    <div id="wrapper">
+    <header id="header" class="inner"><!-- for more effects see _animate.scss -->
+<h1 class="animated bounceInDown">
+    <div id="headerbg">
+        Joe Leo
+    </div>
+</h1>
+<br>
+
+<ul id="social-links" style="text-align:center">
+  
+  <!-- GitHub -->
+  <li>
+  <a href="https://github.com/jleo3" class="github" title="Github"></a>
+  </li>
+  
+  
+  
+  
+  <!-- Twitter -->
+  <li>
+  <a href="http://www.twitter.com/jleo3" class="twitter" title="Twitter"></a>
+  </li>
+  
+  
+  
+  
+  
+</ul>
+
+
+<!-- use full url including 'index.html' for navigation bar if you are using ajax -->
+<ul id="nav">
+	<li id="ajax"><a href="/index.html">Home</a></li>
+	<li id="ajax"><a href="/blog/archives/index.html">Archives</a></li>
+    <li><a href="/atom.xml">RSS</a></li>
+    
+    <li>
+    <div id="dark">
+        <form method="get" action="/search.html" id="search">
+            <input name="query" type="text" placeholder="Search..." x-webkit-speech />
+        </form>
+    </div>
+    </li>
+        
+</ul>
+
+
+
 
 </header>
-  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:www.testdrivendomination.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
 
-</nav> -->
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/">Git-Svn: For People Who Won&#8217;t Let Go of Git</a></h1>
-    
-    
-      <p class="meta">
+<div id="toload">
+<!-- begin toload --> 
+    <div id="content" class="inner">
         
 
 
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/">
+		
+			Git-Svn: For People Who Won&#8217;t Let Go of Git</a>
+	</h2>
+    <div class="entry-content">
+    <div class="meta">
+      <div class="date">Published on: 
+
+
 
 
 
@@ -85,32 +110,34 @@
   
 
 
-<time datetime="2013-01-03T00:00:00-05:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
+<time datetime="2013-01-03T00:00:00-05:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2013</time></div>
+      <div class="tags">Tags: 
 
-
-  <div class="entry-content"><div class='post'>
+</div>
+    </div>
+		<div class='post'>
 <span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif;"><span style="line-height: 17.28333282470703px;">I&#8217;ve been using Git-Svn for awhile now at work because after using Git every day at my old job, I just couldn&#8217;t go back. I&#8217;m hooked, and the prospect of using TortoiseSVN made me sad. So I hammered away trying to install, configure, and run Git-Svn on Cygwin.&nbsp;</span></span><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif;"><span style="line-height: 17.28333282470703px;">At some point I wrote up my experiences and shared them with my teammates. The result: we have three people successfully using Git-Svn and, very recently, started a project using full, pure Git! Git-Svn is in pretty wide use now and most of this can be dug up online pretty easily. But I&#8217;ll post it here in the hopes that it helps someone out at some point.</span></span><br /><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: x-small;"><span style="line-height: 17.28333282470703px;"><br /></span></span><br /><h5 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.1em; margin: 0px 0px 0.1em; padding: 0px;"><span style="font-size: 1.4em;">Why Git?</span></h5><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">I&#8217;m not answering this.&nbsp;<a data-mce-href="http://lmgtfy.com/?q=why+git%3F" href="http://lmgtfy.com/?q=why+git%3F" style="color: rgb(0, 109, 175) !important; outline: none;">Seriously.</a>&nbsp;Git has been around since 2005. I know that for me, no amount of talking or reading convinced me git was better than any other VCS. Then I tried it. Try it.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Why git-svn?</h3><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">Better question. The status quo around here is to use Subversion for version control. There are worse things. SVN usually seems like the best thing to use until you use Git. As it turns out, git-svn is a full-fledged SVN client wrapper. That is, whatever Subversion can do, git-svn can do.</div><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">The result, when done properly, is a git client on your machine to do all the local branching, merging, and committing that you want. When you&#8217;re ready, a simple command will push your changes to the Subversion repository.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Why Listen to Joe? He Looks Weird.</h3><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">Also a fair question and observation. I am not a git expert. I&#8217;ve simply used it for a couple of years and think it&#8217;s the best product out there for version control. As of this writing, I&#8217;ve been using git-svn for nearly six months and have found it to be a great experience. What&#8217;s more, you likely won&#8217;t have to bang your head against the wall trying to figure out how to use it because I&#8217;ve taken the time to do that for you. This Wiki page is far from comprehensive, but I&#8217;ll happily answer any questions you have and even try to fix any issues that you encounter.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Getting Started</h3><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">To start, you&#8217;ll need Git. You&#8217;ll preferably want a version &gt;= 1.7.0. Git can be installed via&nbsp;<a data-mce-href="http://www.cygwin.com/" href="http://www.cygwin.com/" style="color: rgb(0, 109, 175) !important; outline: none;">Cygwin</a>&nbsp;and this is the route I&#8217;ve chosen. All of my examples are based on Git version 1.7.9 on Cygwin running on Windows 7.</div><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">But you can also download a client for your system from the&nbsp;<a data-mce-href="http://git-scm.com/" href="http://git-scm.com/" style="color: rgb(0, 109, 175) !important; outline: none;">Git website</a>. There&#8217;s even a&nbsp;<a data-mce-href="http://code.google.com/p/tortoisegit/" href="http://code.google.com/p/tortoisegit/" style="color: rgb(0, 109, 175) !important; outline: none;">TortoiseGit&nbsp;</a>for those of you who want an easy transition from TortoiseSVN.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Cloning Your Repository</h3><pre style="color: #333333; font-size: 13px; line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git svn clone http://path/to/your/repo</pre><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px;"><br />BEWARE: If your repository is huge or you have a huge number of commits this is going to take a LONG time! One way to get around this is to clone just the latest commit:</span><br /><div><span style="color: #333333; font-family: monospace; font-size: x-small;"><span style="line-height: 17.33333396911621px; white-space: pre-wrap;"><br /></span></span></div><div><pre style="color: #333333; font-size: 13px; line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git svn init http://path/to/your/repo<br />git svn fetch -r $REVISION_NUMBER</pre><pre style="color: #333333; font-size: 13px; line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;"></pre><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">Both approaches will continue to track your history from this point forward.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Workflow</h3><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">Your typical git workflow will fit just fine in the git-svn world. However, you&#8217;ll want to keep a couple of extra commands handy for managing the transition from your git commits to the central SVN repo. Here is my typical hacking scenario:<br /><br /><br /><pre style="line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git checkout master<br />git svn rebase<br />git checkout -b feature-branch<br /><br />#Hack, hack, hack<br /><br />git ci . -m "GRT-999: Finishing the hackathon."<br /><br />git checkout master<br />git svn rebase<br /><br />git checkout feature-branch<br />git rebase master<br />git svn dcommit</pre></div><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px;">The last statement is functionally equivalent to &#8216;git push&#8217; and will move your local changes to the repository. git-svn will make a Subversion commit for every one of your commits, which means you might generate a backup of builds if you&#8217;re a frequent git committer (like me). However, you can also avoid that and roll all of your commits up into one subversion commit by doing the following:</span></div><div><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px;"><br /></span></div><div><pre style="color: #333333; font-size: 13px; line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git ci --amend --all</pre></div><div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Extras</h3><ul style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; list-style-position: outside; margin-bottom: 10px; margin-left: 0px; margin-top: 0px; padding-left: 3em; padding-top: 0px;"><li style="font-size: 10pt; line-height: 13pt; margin: 0px; padding: 0px;"><div style="font-size: 10pt; line-height: 13pt; margin-bottom: 10px; padding: 0px;">Here&#8217;s what I add to my .git/config file to make working with git even easier:<br /><br /><pre style="overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;"></pre><pre style="overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">[alias]<br />        st = status<br />        ci = commit<br />        co = checkout<br />        df = diff<br />[color]<br />        branch = auto<br />        diff = auto<br />        interactive = auto<br />        status = auto</pre><br /></div></li></ul><ul style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; list-style-position: outside; margin-bottom: 10px; margin-left: 0px; margin-top: 0px; padding-left: 3em; padding-top: 0px;"><li style="font-size: 10pt; line-height: 13pt; margin: 0px; padding: 0px;"><div style="font-size: 10pt; line-height: 13pt; margin-bottom: 10px; padding: 0px;">You&#8217;ll find that you&#8217;re using the above git-svn commands quite often. I set up a few quick bash aliases to save me all the typing:</div><div style="font-size: 10pt; line-height: 13pt; padding: 0px;"><br /><pre style="overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">alias grm='git rebase master'<br />alias gcm='git co master'<br />alias gsd='git svn dcommit'<br />alias gsr='git svn rebase'<br />alias gs='git stash'<br />alias gsp='git stash pop'<br />alias st='git status'</pre></div></li></ul><ul style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; list-style-position: outside; margin-bottom: 10px; margin-left: 0px; margin-top: 0px; padding-left: 3em; padding-top: 0px;"><li style="font-size: 10pt; line-height: 13pt; margin: 0px; padding: 0px;"><div style="font-size: 10pt; line-height: 13pt; margin-bottom: 10px; padding: 0px;">It&#8217;s a good idea to keep a .gitignore file (which is how git keeps track of, well, ignored files) in your repository so that other people using git-svn can benefit. To set it up for the first time, you can use the following command to parse all of your SVN ignores and push them into .gitignore:</div><div style="font-size: 10pt; line-height: 13pt; padding: 0px;"><br /><pre style="overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git svn show-ignore &gt;&gt; .gitignore</pre><br /><br />BEWARE: This command takes a VERY LONG time, but it only has to be run once. From that point on you can edit the .gitignore file using Vim/your favorite editor.</div></li></ul><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; padding: 0px;"></div></div></div>
+
+		
+		
+	</div>
+
+<div class="meta">
+	
 </div>
-  
-  
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/29/rails-from-thin-air-on-rhel-5/">Rails From Thin Air on RHEL 5</a></h1>
-    
-    
-      <p class="meta">
-        
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/12/29/rails-from-thin-air-on-rhel-5/">
+		
+			Rails From Thin Air on RHEL 5</a>
+	</h2>
+    <div class="entry-content">
+    <div class="meta">
+      <div class="date">Published on: 
 
 
 
@@ -122,32 +149,34 @@
   
 
 
-<time datetime="2012-12-29T00:00:00-05:00" pubdate data-updated="true">Dec 29<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
+<time datetime="2012-12-29T00:00:00-05:00" pubdate data-updated="true">Dec 29<span>th</span>, 2012</time></div>
+      <div class="tags">Tags: 
 
-
-  <div class="entry-content"><div class='post'>
+</div>
+    </div>
+		<div class='post'>
 <br />I&#8217;m completing a draconian exercise which is teaching me many lessons about installation and configuration whether I like it or not. The best I can do, as I struggle along, is to write about my experience. I certainly don&#8217;t want to have to do this again from scratch, so after I complete each step I&#8217;m adding it to a script.<br /><br />The scene: I work for a very big company. Like many big companies, there are many rules in place that govern access to particular machines. I am starting a brand new Rails project and have had to overcome a number of obstacles to ready my team for deployment. Here are the bullet points:<br /><br /><ul><li>A cluster of Red Hat Enterprise Linux Servers, release 5.6 (Tikanga)</li><li>Bash</li><li>wget</li><li>No root access</li><li>No ability to use sudo, ever</li></ul><br />The requirement, a working Ruby and Rails project, has a handful of dependencies: libxml2, libxslt, bz2, SQLite3 version &gt;= 3.6, Python version &gt;= 2.6. None of these are installed with RHEL 5 out of the box, so I&#8217;m going to build all of them.<br /><br /><b>Setting up in vendor/</b><br />First I&#8217;ll create a directory underneath my vendor/ directory in RAILS_HOME because &#8221;<a href="http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/" target="_blank">vendor everything still applies</a>.&#8221; I call it setup/. Here is where I will put everything my server needs to run my application. I&#8217;ll have my installation script and src/ and local/ directories.<br /><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">joe@warpaint:~/dev/tddominate/vendor$ ls</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">setup &nbsp;setup_env.bat &nbsp;src</span></span><br /><br />Next it&#8217;s time to create a bash script. I set it to exit on any command failure with set -e and create some variables, beginning with SETUP_DIR. SETUP_DIR is set to be the directory where I&#8217;ve written my script, regardless of the location from which the script is executed (<a href="http://stackoverflow.com/a/246128/1617395" target="_blank">thanks to StackExchange</a> for help with this):<br /><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">#!/bin/bash</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">set -e</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">SETUP_DIR=&#8221;$( cd &#8220;$( dirname &#8220;${BASH_SOURCE[0]}&#8221; )&#8221; &amp;&amp; pwd )&#8221;</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">SETUP_DIR_SRC=&#8221;$SETUP_DIR/src&#8221;</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">SETUP_DIR_LOCAL=&#8221;$SETUP_DIR/local</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">mkdir -p $SETUP_DIR_LOCAL</span></span><br /><span style="background-color: #cccccc;"><br /></span><b>Ruby and Rubygems</b><br />Ruby and Rubygems are easy installs for me despite my inability to use RVM on these machines (permission issue).<br /><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd $SETUP_DIR_SRC</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">tar xzvf ruby-1.9.3-p327.tar.gz</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd ruby-1.9.3-p327</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">./configure &#8211;prefix=/my/location/ruby 15 make</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">make install</span></span><br /><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">echo &#8220;export PATH=/my/location/ruby/bin:$PATH&#8221; &gt;&gt; ~/.bashrc</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">echo &#8220;export HTTP_PROXY=http://proxy.net:8080&#8221; &gt;&gt; ~/.bashrc</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">echo &#8220;export HTTPS_PROXY=https://proxy.net:8080&#8221; &gt;&gt; ~/.bashrc</span></span><br /><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">. ~/.bashrc</span></span><br /><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;"><br /></span><br /><div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd $SETUP_DIR_SRC</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">tar xvf rubygems-1.8.24.tar</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd rubygems-1.8.24</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">ruby setup.rb &#8211;prefix=/my/location</span></span></div><div><br /></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">gem install bundler</span></span></div><div><br /></div><div>I set the HTTP_PROXY and HTTPS_PROXY environment variables so that rubygems can do its thing.</div><div><br /></div><div><b>Prepare for Nokogiri (building libxml2 and libxslt from source)</b></div><div>OK, enough of the easy stuff. Enter libxml and libxslt. With no rpm and no sudo, I&#8217;m going to have to get my hands dirty:</div><div><br /></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd $SETUP_DIR_SRC</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">wget ftp://xmlsoft.org/libxml2/libxml2-2.7.8.tar.gz</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">tar xzvf libxml2-2.7.8.tar.gz</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd $SETUP_DIR_SRC/libxml2-2.7.8</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">./configure &#8211;prefix=$SETUP_DIR_LOCAL ; make ; make install</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;"><br /></span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd $SETUP_DIR_SRC</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">wget ftp://xmlsoft.org/libxml2/libxslt-1.1.28.tar.gz</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">tar xzvf libxslt-1.1.28.tar.gz</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd $SETUP_DIR_SRC/libxslt-1.1.28</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">./configure &#8211;prefix=$SETUP_DIR_LOCAL \&nbsp;</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &#8211;with-libxml-prefix=$SETUP_DIR_LOCAL \&nbsp;</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &#8211;with-libxml-include-prefix=$SETUP_DIR_LOCAL/include \&nbsp;</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &#8211;with-libxml-libs-prefix=$SETUP_DIR_LOCAL/lib</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">make ; make install</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;"><br /></span></span></div><div>If you prayed to the right Linux gods, this will work for you with a little tinkering. Next I&#8217;ll add the right configuration to bundler for install time. Note that the libxml2 specified is the source directory and the libxslt specified is the installation directory.</div><div><br /></div><div><span style="font-family: Courier New, Courier, monospace;"><span style="background-color: #cccccc;">bundle config build.nokogiri &#8211;with-xml2-dir=$SETUP_DIR_SRC/libxml2-2.7.8 &#8211;with-xslt-dir=$SETUP_DIR_LOCAL</span></span></div><div><br /></div><div><b>Runtime for ExecJS</b></div><div>Now you&#8217;re all set to bundle install. Your gems install flawlessly. You&#8217;re tempted to celebrate. Then you run rspec. Or rails s. Or rake. And you still have problems. Something in the way of:</div><div><br /></div><div><span style="font-family: Helvetica Neue, Arial, Helvetica, sans-serif;">Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes.</span></div></div><div><br /></div><div><div>I still have work to do.</div><div><br /></div><div>Sam Stephenson and Josh Peek created something awesome with <a href="https://github.com/sstephenson/execjs" target="_blank">ExecJS</a>. They are the ones that make executing Javascript through Ruby possible. Under the hood, in almost everything we do in Rails applications these days, ExecJS is there. It&#8217;s a workhorse akin to Nokogiri. There&#8217;s just one thing they ask of you to get started - that you actually have a Javascript runtime! Your Gemfile is already giving you a hint:</div><div><br /></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;"># See https://github.com/sstephenson/execjs#readme for more supported runtimes</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;"># gem &#8216;therubyracer&#8217;</span></div><div><br /></div><div>As noted, there are other runtime options, but in order to build the dependencies &#8211; in this case libv8 &#8211; I need to upgrade my version of Python to 2.7. On a debian system,&nbsp;Python does not come with bz2 support out of the box. It has to be configured to do this.&nbsp;Red Hat 5 does not come with the bz2 developer library, just the binaries. So I&#8217;ll download and build it.&nbsp;</div><div><br /></div><div>There is a specific way to build bz2 so that it shares its libraries with others (like Python) and trying to figure it out nearly drained my remaining life force. I have to make and install bz2 twice, strange though it may seem. This is so it knows to build a shared library that on which Python depends. &nbsp;Since I am building bz2 and installing it in a custom location (using the PREFIX option), I &nbsp;then need to tell Python where it&#8217;s been installed. Borrowing heavily from a script and <a href="http://rajaseelan.com/2012/01/28/installing-python-2-dot-7-2-on-centos-5-dot-2/#disqus_thread" target="_blank">blog post by @rajaleen</a>, here&#8217;s what I did:</div><div><br /></div><div>I export my PREFIX as an environment variable:</div><div><br /></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">export PREFIX=/path/to/custom_install</span></span></div><div><br /></div><div>Make and install bz2 twice</div><div><div><br /></div></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">make -f Makefile_libbz2_so</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">make install PREFIX=$PREFIX</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">make</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">make install PREFIX=$PREFIX</span></div><div><br /></div><div>I set the necessary environment variables for Python compilation:</div><div><br /></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">export C_INCLUDE_PATH=/path/to/custom_install/include</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">export CPLUS_INCLUDE_PATH=$C_INCLUDE_PATH</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">export LIBRARY_PATH=/path/to/custom_install/lib</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">export LD_RUN_PATH=$LIBRARY_PATH</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;"><br /></span></div><div><span style="background-color: white; font-family: Times, Times New Roman, serif;">Finally, I use the &#8211;enable-shared option when configuring Python. This tells Python to build both its static and dynamic libraries:</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;"><br /></span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">cd Python-2.7.3</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">./configure &#8211;prefix=$PREFIX &#8211;enable-shared</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">make</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">make install</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;"><br /></span></div><div>Now our gem install libv8 works flawlessly and I &nbsp;uncomment gem &#8216;therubyracer&#8217; from our Gemfile and add a requirement for libv8:</div><div><br /></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">gem &#8216;libv8&#8217;&nbsp;</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">gem &#8216;therubyracer&#8217;&nbsp;</span></span></div><div><br /></div><div><b>SQLite3 is laughably outdated</b></div><div>bundle install works flawlessly once again, and when I run rspec, the specs run! But they are failing for strange reasons:</div><div><br /></div><div><span style="font-family: Helvetica Neue, Arial, Helvetica, sans-serif;">Failure/Error: environment = Environment.make! ActiveRecord::StatementInvalid: SQLite3::SQLException: near &#8220;SAVEPOINT&#8221;: syntax error: SAVEPOINT active_record_1</span></div><div><br /></div><div><div>From the SQLite3 documentation: &nbsp;&#8220;SAVEPOINTs are a method of creating transactions, similar to BEGIN and COMMIT, except that the SAVEPOINT and RELEASE commands are named and may be nested.&#8221; SAVEPOINTs have been supported since version 3.6.8. However, my RHEL 5 machine (and I believe all others as well) comes bundled with version 3.3.6, which was released in June of 2006. Time to upgrade.</div><div><br /></div><div>Actually, this was part of the process was pleasantly easy with only one catch. I&#8217;m going to configure and install SQLite3 with our &#8211;prefix the same as always:</div><div><br /></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">wget http://www.sqlite.org/sqlite-autoconf-3071501.tar.gz</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">tar xzvf sqlite-autoconf-3071501.tar.gz</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">cd sqlite-autoconf-3071501</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">./configure &#8211;prefix=$PREFIX</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">make</span></span></div><div><span style="background-color: #cccccc;"><span style="font-family: Courier New, Courier, monospace;">make install</span></span></div><div><br /></div><div>When I run rspec, I still see the same errors. This is because the sqlite3 gem needs to be reconfigured. My method: uninstall/reinstall, and tell bundler about my configurations:</div><div><br /></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">bundle exec gem uninstall sqlite3</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">bundle config build.sqlite3 &#8211;with-sqlite3-dir=$PREFIX</span></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">bundle install</span></div><div><br /></div><div>One potential roadblock that may occur is the following when you try to run your specs:</div><div><br /></div><div><span style="font-family: Helvetica Neue, Arial, Helvetica, sans-serif;">sqlite3-ruby-1.3.1/lib/sqlite3/sqlite3_native.so: undefined symbol:&nbsp;</span></div><div><span style="font-family: Helvetica Neue, Arial, Helvetica, sans-serif;">sqlite3_initialize&nbsp;</span></div><div><br /></div><div>The solution comes <a href="https://groups.google.com/forum/#!msg/sqlite3-ruby/crbvv358SeY/fY_-c3y134IJ" target="_blank">courtesy of Aaron Patterson</a>. To make the sqlite3 gem play nicely, I &nbsp;need to add my PREFIX/lib directory to the LD_LIBRARY_PATH:</div><div><br /></div><div><span style="background-color: #cccccc; font-family: Courier New, Courier, monospace;">export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH</span></div><div><br /></div><div>Finally, I&#8217;m at the finish line. I run rspec:</div><div><br /></div><div><br /></div><div>&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.</div><div><br /></div><div><br /></div><div><br /></div><div><div>Finished in 1.02 seconds</div><div>31 examples, 0 failures, 0 pending</div><div><br /></div><div><br /></div><div><b>Ahh, that&#8217;s the stuff! Happy coding!</b></div></div></div></div><div><br /></div></div>
+
+		
+		
+	</div>
+
+<div class="meta">
+	
 </div>
-  
-  
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/20/git-while-gittings-good/">Git While the Gitting&#8217;s Good</a></h1>
-    
-    
-      <p class="meta">
-        
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/12/20/git-while-gittings-good/">
+		
+			Git While the Gitting&#8217;s Good</a>
+	</h2>
+    <div class="entry-content">
+    <div class="meta">
+      <div class="date">Published on: 
 
 
 
@@ -159,168 +188,66 @@
   
 
 
-<time datetime="2012-12-20T00:00:00-05:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
+<time datetime="2012-12-20T00:00:00-05:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time></div>
+      <div class="tags">Tags: 
 
-
-  <div class="entry-content"><div class='post'>
+</div>
+    </div>
+		<div class='post'>
 I saw an opening and I went for it.<br /><br />After using git-svn for the past 5 months in a desperate attempt to keep my sanity in the face of a massive subversion repository, my team got a greenfield project. I honestly couldn&#8217;t help myself. &#8220;Ruby! Rails! Git! I&#8217;m on it!&#8221; So I became our&nbsp;<i>de facto </i>devops guy for a brand spanking new project, tasked with everything from configuring OpenSSH to installing Ruby and Rails on a severely locked down Windows system (many thanks once again to <a href="https://twitter.com/luislavena" target="_blank">Luis Lavena</a> and <a href="http://wayneeseguin.wordpress.com/" target="_blank">Wayne Seguin</a>&nbsp;for making this possible) to learning about <a href="http://code.google.com/p/tortoisegit/" target="_blank">TortoiseGit </a>to make our existing ToroiseSVN users feel comfortable.<br /><br />For Git we&#8217;re using a standard SSH provisioning system on a remote repository. But my company does not allow Git on their central servers so our repository is hosted on a flaky VM with no guaranteed backups or failovers. That won&#8217;t do. To solve this, I decided to add the entire repository to my existing SVN repository.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-Xk7_Yw5rDfQ/UNM88m-m-1I/AAAAAAAAAqE/zZi9Z9N6NlI/s1600/blog1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="47" src="http://1.bp.blogspot.com/-Xk7_Yw5rDfQ/UNM88m-m-1I/AAAAAAAAAqE/zZi9Z9N6NlI/s320/blog1.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-FCbucsxkE3s/UNM9AiCQw3I/AAAAAAAAAqM/vqC7xBRePIE/s1600/blog2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="40" src="http://3.bp.blogspot.com/-FCbucsxkE3s/UNM9AiCQw3I/AAAAAAAAAqM/vqC7xBRePIE/s640/blog2.png" width="640" /></a></div><br />Now that we&#8217;re official, I want to make sure that I keep backing things up. Here&#8217;s a script I adapted from an <a href="http://stackoverflow.com/questions/758916/how-to-make-subversion-or-any-program-perform-periodic-commits/759521#759521" target="_blank">answer on StackExchange</a>&nbsp;(thanks <a href="http://robertmassaioli.wordpress.com/" target="_blank">Robert Massaoli</a>):<br /><br /><br /><span style="font-family: Courier New, Courier, monospace;">#!/bin/bash</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: Courier New, Courier, monospace;">cd ..</span><br /><span style="font-family: Courier New, Courier, monospace;">while [ 1 ]</span><br /><span style="font-family: Courier New, Courier, monospace;">do</span><br /><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; svn add &#8211;force deployer.git/</span><br /><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; svn commit -m &#8220;GRT-0: Autocommitting deployer.git&#8221;</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; sleep 600</span><br /><span style="font-family: Courier New, Courier, monospace;">done</span><br /><div><br /></div><div><br /></div></div>
+
+		
+		
+	</div>
+
+<div class="meta">
+	
 </div>
-  
-  
+</article>
 
-
-    </article>
-  
-  <div class="pagination">
+<nav id="pagenavi">
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
-    <a href="archives">Blog Archives</a>
+        <a href="/blog/page/2/" class="next">Next</a>
     
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <ul id="recent_posts">
-      <li class="post">
-      <a href="http://www.testdrivendomination.com" alt="Home"><img src="/images/Home.png"></a>
-      <a href="http://www.testdrivendomination.com/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
-      <a href="mailto:" alt="E-Mail"><img src="/images/Envelope.png"></a>
-      <a href="http://www.testdrivendomination.com/atom.xml" alt="subscribe feed"><img src="/images/rss.png"></a>
-      </li>
-  </ul>
-</section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/">Git-Svn: For People Who Won&#8217;t Let Go of Git</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/29/rails-from-thin-air-on-rhel-5/">Rails from Thin Air on RHEL 5</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/20/git-while-gittings-good/">Git While The Gitting&#8217;s Good</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/18/expecting-and-handling-unexpected/">Expecting (and Handling) the Unexpected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/06/exceptionally-lazy/">Exceptionally Lazy</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/jleo3">@jleo3</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'jleo3',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("jleo3", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/jleo3" class="twitter-follow-button" data-show-count="false">Follow @jleo3</a>
-  
-</section>
-
-
-
-
-
-  
-</aside>
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav>
 
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Joe Leo -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+    <footer id="footer">
+    <div style="display:inline">
+    Copyright &copy; 2013
 
-</footer>
-  
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    Joe Leo
+. Powered by <a href="http://octopress.org">Octopress</a> | 
+    Theme <a href="http://github.com/panks/fabric">fabric</a> by <a href="http://panks.me">Pankaj Kumar</a>
+</div>
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
+    </footer>
+    <script src="/javascripts/fabric.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
 
 
 
 
+
+
+
+<!-- end toload --> 
+</div>
+</div>
+<script src="/javascripts/jquery.ui.totop.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+;(function($){$().UItoTop({easingType:'easeOutCirc'});})(jQuery); 
+/*]]>*/
+</script><!-- remove it to remove the scroll to top button -->
 </body>
 </html>

@@ -1,287 +1,155 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Git-Svn: For People Who Won't Let Go of Git - Test Driven Domination</title>
-  <meta name="author" content="Joe Leo">
+	<meta charset="utf-8">
+	<title>Git-Svn: For People Who Won't Let Go of Git - Test Driven Domination</title>
+    <meta name="author" content="Joe Leo">
+    
+	<meta name="description" content="I&#8217;ve been using Git-Svn for awhile now at work because after using Git every day at my old job, I just couldn&#8217;t go back. I&#8217;m &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
-  <meta name="description" content="I&#8217;ve been using Git-Svn for awhile now at work because after using Git every day at my old job, I just couldn&#8217;t go back. I&#8217;m &hellip;">
-  
+	<link href="/atom.xml" rel="alternate" title="Test Driven Domination" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.ico" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-  
-  <link rel="canonical" href="http://www.testdrivendomination.com/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Test Driven Domination" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
 
-
-  
-
+    <!-- remove or comment it to disable ajaxification -->   
+    <script src="/javascripts/ajaxify.js"></script>
+   
+    
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-</hgroup>
+
+<body>
+    <div id="wrapper">
+    <header id="header" class="inner"><!-- for more effects see _animate.scss -->
+<h1 class="animated bounceInDown">
+    <div id="headerbg">
+        Joe Leo
+    </div>
+</h1>
+<br>
+
+<ul id="social-links" style="text-align:center">
+  
+  <!-- GitHub -->
+  <li>
+  <a href="https://github.com/jleo3" class="github" title="Github"></a>
+  </li>
+  
+  
+  
+  
+  <!-- Twitter -->
+  <li>
+  <a href="http://www.twitter.com/jleo3" class="twitter" title="Twitter"></a>
+  </li>
+  
+  
+  
+  
+  
+</ul>
+
+
+<!-- use full url including 'index.html' for navigation bar if you are using ajax -->
+<ul id="nav">
+	<li id="ajax"><a href="/index.html">Home</a></li>
+	<li id="ajax"><a href="/blog/archives/index.html">Archives</a></li>
+    <li><a href="/atom.xml">RSS</a></li>
+    
+    <li>
+    <div id="dark">
+        <form method="get" action="/search.html" id="search">
+            <input name="query" type="text" placeholder="Search..." x-webkit-speech />
+        </form>
+    </div>
+    </li>
+        
+</ul>
+
+
+
 
 </header>
-  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:www.testdrivendomination.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
 
-</nav> -->
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
-    
-      <h1 class="entry-title">Git-Svn: For People Who Won't Let Go of Git</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-03T00:00:00-05:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><div class='post'>
+<div id="toload">
+<!-- begin toload --> 
+    <div id="content" class="inner">
+        <article class="post">
+	<h2 class="title">Git-Svn: For People Who Won't Let Go of Git</h2>
+	<div class="entry-content"><div class='post'>
 <span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif;"><span style="line-height: 17.28333282470703px;">I&#8217;ve been using Git-Svn for awhile now at work because after using Git every day at my old job, I just couldn&#8217;t go back. I&#8217;m hooked, and the prospect of using TortoiseSVN made me sad. So I hammered away trying to install, configure, and run Git-Svn on Cygwin.&nbsp;</span></span><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif;"><span style="line-height: 17.28333282470703px;">At some point I wrote up my experiences and shared them with my teammates. The result: we have three people successfully using Git-Svn and, very recently, started a project using full, pure Git! Git-Svn is in pretty wide use now and most of this can be dug up online pretty easily. But I&#8217;ll post it here in the hopes that it helps someone out at some point.</span></span><br /><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: x-small;"><span style="line-height: 17.28333282470703px;"><br /></span></span><br /><h5 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.1em; margin: 0px 0px 0.1em; padding: 0px;"><span style="font-size: 1.4em;">Why Git?</span></h5><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">I&#8217;m not answering this.&nbsp;<a data-mce-href="http://lmgtfy.com/?q=why+git%3F" href="http://lmgtfy.com/?q=why+git%3F" style="color: rgb(0, 109, 175) !important; outline: none;">Seriously.</a>&nbsp;Git has been around since 2005. I know that for me, no amount of talking or reading convinced me git was better than any other VCS. Then I tried it. Try it.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Why git-svn?</h3><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">Better question. The status quo around here is to use Subversion for version control. There are worse things. SVN usually seems like the best thing to use until you use Git. As it turns out, git-svn is a full-fledged SVN client wrapper. That is, whatever Subversion can do, git-svn can do.</div><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">The result, when done properly, is a git client on your machine to do all the local branching, merging, and committing that you want. When you&#8217;re ready, a simple command will push your changes to the Subversion repository.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Why Listen to Joe? He Looks Weird.</h3><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">Also a fair question and observation. I am not a git expert. I&#8217;ve simply used it for a couple of years and think it&#8217;s the best product out there for version control. As of this writing, I&#8217;ve been using git-svn for nearly six months and have found it to be a great experience. What&#8217;s more, you likely won&#8217;t have to bang your head against the wall trying to figure out how to use it because I&#8217;ve taken the time to do that for you. This Wiki page is far from comprehensive, but I&#8217;ll happily answer any questions you have and even try to fix any issues that you encounter.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Getting Started</h3><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">To start, you&#8217;ll need Git. You&#8217;ll preferably want a version &gt;= 1.7.0. Git can be installed via&nbsp;<a data-mce-href="http://www.cygwin.com/" href="http://www.cygwin.com/" style="color: rgb(0, 109, 175) !important; outline: none;">Cygwin</a>&nbsp;and this is the route I&#8217;ve chosen. All of my examples are based on Git version 1.7.9 on Cygwin running on Windows 7.</div><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">But you can also download a client for your system from the&nbsp;<a data-mce-href="http://git-scm.com/" href="http://git-scm.com/" style="color: rgb(0, 109, 175) !important; outline: none;">Git website</a>. There&#8217;s even a&nbsp;<a data-mce-href="http://code.google.com/p/tortoisegit/" href="http://code.google.com/p/tortoisegit/" style="color: rgb(0, 109, 175) !important; outline: none;">TortoiseGit&nbsp;</a>for those of you who want an easy transition from TortoiseSVN.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Cloning Your Repository</h3><pre style="color: #333333; font-size: 13px; line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git svn clone http://path/to/your/repo</pre><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px;"><br />BEWARE: If your repository is huge or you have a huge number of commits this is going to take a LONG time! One way to get around this is to clone just the latest commit:</span><br /><div><span style="color: #333333; font-family: monospace; font-size: x-small;"><span style="line-height: 17.33333396911621px; white-space: pre-wrap;"><br /></span></span></div><div><pre style="color: #333333; font-size: 13px; line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git svn init http://path/to/your/repo<br />git svn fetch -r $REVISION_NUMBER</pre><pre style="color: #333333; font-size: 13px; line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;"></pre><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">Both approaches will continue to track your history from this point forward.</div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Workflow</h3><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; margin-bottom: 10px; padding: 0px;">Your typical git workflow will fit just fine in the git-svn world. However, you&#8217;ll want to keep a couple of extra commands handy for managing the transition from your git commits to the central SVN repo. Here is my typical hacking scenario:<br /><br /><br /><pre style="line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git checkout master<br />git svn rebase<br />git checkout -b feature-branch<br /><br />#Hack, hack, hack<br /><br />git ci . -m "GRT-999: Finishing the hackathon."<br /><br />git checkout master<br />git svn rebase<br /><br />git checkout feature-branch<br />git rebase master<br />git svn dcommit</pre></div><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px;">The last statement is functionally equivalent to &#8216;git push&#8217; and will move your local changes to the repository. git-svn will make a Subversion commit for every one of your commits, which means you might generate a backup of builds if you&#8217;re a frequent git committer (like me). However, you can also avoid that and roll all of your commits up into one subversion commit by doing the following:</span></div><div><span style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px;"><br /></span></div><div><pre style="color: #333333; font-size: 13px; line-height: 17.33333396911621px; overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git ci --amend --all</pre></div><div><h3 style="font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 1.4em; margin: 1.5em 0px 0.5em; padding: 0px;">Extras</h3><ul style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; list-style-position: outside; margin-bottom: 10px; margin-left: 0px; margin-top: 0px; padding-left: 3em; padding-top: 0px;"><li style="font-size: 10pt; line-height: 13pt; margin: 0px; padding: 0px;"><div style="font-size: 10pt; line-height: 13pt; margin-bottom: 10px; padding: 0px;">Here&#8217;s what I add to my .git/config file to make working with git even easier:<br /><br /><pre style="overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;"></pre><pre style="overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">[alias]<br />        st = status<br />        ci = commit<br />        co = checkout<br />        df = diff<br />[color]<br />        branch = auto<br />        diff = auto<br />        interactive = auto<br />        status = auto</pre><br /></div></li></ul><ul style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; list-style-position: outside; margin-bottom: 10px; margin-left: 0px; margin-top: 0px; padding-left: 3em; padding-top: 0px;"><li style="font-size: 10pt; line-height: 13pt; margin: 0px; padding: 0px;"><div style="font-size: 10pt; line-height: 13pt; margin-bottom: 10px; padding: 0px;">You&#8217;ll find that you&#8217;re using the above git-svn commands quite often. I set up a few quick bash aliases to save me all the typing:</div><div style="font-size: 10pt; line-height: 13pt; padding: 0px;"><br /><pre style="overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">alias grm='git rebase master'<br />alias gcm='git co master'<br />alias gsd='git svn dcommit'<br />alias gsr='git svn rebase'<br />alias gs='git stash'<br />alias gsp='git stash pop'<br />alias st='git status'</pre></div></li></ul><ul style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; list-style-position: outside; margin-bottom: 10px; margin-left: 0px; margin-top: 0px; padding-left: 3em; padding-top: 0px;"><li style="font-size: 10pt; line-height: 13pt; margin: 0px; padding: 0px;"><div style="font-size: 10pt; line-height: 13pt; margin-bottom: 10px; padding: 0px;">It&#8217;s a good idea to keep a .gitignore file (which is how git keeps track of, well, ignored files) in your repository so that other people using git-svn can benefit. To set it up for the first time, you can use the following command to parse all of your SVN ignores and push them into .gitignore:</div><div style="font-size: 10pt; line-height: 13pt; padding: 0px;"><br /><pre style="overflow: visible; padding: 0px; tab-size: 4; white-space: pre-wrap;">git svn show-ignore &gt;&gt; .gitignore</pre><br /><br />BEWARE: This command takes a VERY LONG time, but it only has to be run once. From that point on you can edit the .gitignore file using Vim/your favorite editor.</div></li></ul><div style="color: #333333; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 13.333333969116211px; line-height: 17.314815521240234px; padding: 0px;"></div></div></div>
 </div>
 
-
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Joe Leo</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-03T00:00:00-05:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2013</time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.testdrivendomination.com/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/" data-via="jleo3" data-counturl="http://www.testdrivendomination.com/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/" >Tweet</a>
-  
-  
-  <div class="g-plusone" data-size="medium"></div>
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
+<div class="meta">
+	
 </div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/12/29/rails-from-thin-air-on-rhel-5/" title="Previous Post: Rails from Thin Air on RHEL 5">&laquo; Rails from Thin Air on RHEL 5</a>
-      
-      
-    </p>
-  </footer>
 </article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
 
-<aside class="sidebar">
-  
-    <section>
-  <ul id="recent_posts">
-      <li class="post">
-      <a href="http://www.testdrivendomination.com" alt="Home"><img src="/images/Home.png"></a>
-      <a href="http://www.testdrivendomination.com/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
-      <a href="mailto:" alt="E-Mail"><img src="/images/Envelope.png"></a>
-      <a href="http://www.testdrivendomination.com/atom.xml" alt="subscribe feed"><img src="/images/rss.png"></a>
-      </li>
-  </ul>
-</section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/01/03/git-svn-for-people-who-wont-let-go-of/">Git-Svn: For People Who Won't Let Go of Git</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/29/rails-from-thin-air-on-rhel-5/">Rails from Thin Air on RHEL 5</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/20/git-while-gittings-good/">Git While The Gitting's Good</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/18/expecting-and-handling-unexpected/">Expecting (and Handling) the Unexpected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/06/exceptionally-lazy/">Exceptionally Lazy</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/jleo3">@jleo3</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'jleo3',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("jleo3", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/jleo3" class="twitter-follow-button" data-show-count="false">Follow @jleo3</a>
-  
-</section>
-
-
-
-
-
-  
-</aside>
 
 
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Joe Leo -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+    <footer id="footer">
+    <div style="display:inline">
+    Copyright &copy; 2013
 
-</footer>
-  
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    Joe Leo
+. Powered by <a href="http://octopress.org">Octopress</a> | 
+    Theme <a href="http://github.com/panks/fabric">fabric</a> by <a href="http://panks.me">Pankaj Kumar</a>
+</div>
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
+    </footer>
+    <script src="/javascripts/fabric.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
 
 
 
 
+
+
+
+<!-- end toload --> 
+</div>
+</div>
+<script src="/javascripts/jquery.ui.totop.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+;(function($){$().UItoTop({easingType:'easeOutCirc'});})(jQuery); 
+/*]]>*/
+</script><!-- remove it to remove the scroll to top button -->
 </body>
 </html>
