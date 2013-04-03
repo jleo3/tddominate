@@ -6,7 +6,7 @@
 	<title>Test Driven Domination</title>
     <meta name="author" content="Joe Leo">
     
-	<meta name="description" content="Published on: Dec 18th, 2012 Tags: In an earlier post I mentioned that I&#8217;m creating an unhandled exception manager inspired by Jeff Atwood&# &hellip;">
+	<meta name="description" content="Published on: Dec 20th, 2012 Tags: I saw an opening and I went for it.After using git-svn for the past 5 months in a desperate attempt to keep my &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -104,6 +104,45 @@
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2012/12/20/git-while-gittings-good/">
+		
+			Git While the Gitting&#8217;s Good</a>
+	</h2>
+    <div class="entry-content">
+    <div class="meta">
+      <div class="date">Published on: 
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-20T00:00:00-05:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time></div>
+      <div class="tags">Tags: 
+
+</div>
+    </div>
+		<div class='post'>
+I saw an opening and I went for it.<br /><br />After using git-svn for the past 5 months in a desperate attempt to keep my sanity in the face of a massive subversion repository, my team got a greenfield project. I honestly couldn&#8217;t help myself. &#8220;Ruby! Rails! Git! I&#8217;m on it!&#8221; So I became our&nbsp;<i>de facto </i>devops guy for a brand spanking new project, tasked with everything from configuring OpenSSH to installing Ruby and Rails on a severely locked down Windows system (many thanks once again to <a href="https://twitter.com/luislavena" target="_blank">Luis Lavena</a> and <a href="http://wayneeseguin.wordpress.com/" target="_blank">Wayne Seguin</a>&nbsp;for making this possible) to learning about <a href="http://code.google.com/p/tortoisegit/" target="_blank">TortoiseGit </a>to make our existing ToroiseSVN users feel comfortable.<br /><br />For Git we&#8217;re using a standard SSH provisioning system on a remote repository. But my company does not allow Git on their central servers so our repository is hosted on a flaky VM with no guaranteed backups or failovers. That won&#8217;t do. To solve this, I decided to add the entire repository to my existing SVN repository.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-Xk7_Yw5rDfQ/UNM88m-m-1I/AAAAAAAAAqE/zZi9Z9N6NlI/s1600/blog1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="47" src="http://1.bp.blogspot.com/-Xk7_Yw5rDfQ/UNM88m-m-1I/AAAAAAAAAqE/zZi9Z9N6NlI/s320/blog1.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-FCbucsxkE3s/UNM9AiCQw3I/AAAAAAAAAqM/vqC7xBRePIE/s1600/blog2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="40" src="http://3.bp.blogspot.com/-FCbucsxkE3s/UNM9AiCQw3I/AAAAAAAAAqM/vqC7xBRePIE/s640/blog2.png" width="640" /></a></div><br />Now that we&#8217;re official, I want to make sure that I keep backing things up. Here&#8217;s a script I adapted from an <a href="http://stackoverflow.com/questions/758916/how-to-make-subversion-or-any-program-perform-periodic-commits/759521#759521" target="_blank">answer on StackExchange</a>&nbsp;(thanks <a href="http://robertmassaioli.wordpress.com/" target="_blank">Robert Massaoli</a>):<br /><br /><br /><span style="font-family: Courier New, Courier, monospace;">#!/bin/bash</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: Courier New, Courier, monospace;">cd ..</span><br /><span style="font-family: Courier New, Courier, monospace;">while [ 1 ]</span><br /><span style="font-family: Courier New, Courier, monospace;">do</span><br /><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; svn add &#8211;force deployer.git/</span><br /><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; svn commit -m &#8220;GRT-0: Autocommitting deployer.git&#8221;</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: Courier New, Courier, monospace;">&nbsp; &nbsp; &nbsp; &nbsp; sleep 600</span><br /><span style="font-family: Courier New, Courier, monospace;">done</span><br /><div><br /></div><div><br /></div></div>
+
+		
+		
+	</div>
+
+<div class="meta">
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2012/12/18/expecting-and-handling-unexpected/">
 		
 			Expecting (and Handling) the Unexpected</a>
@@ -178,49 +217,12 @@ In <a href="http://testdrivendomination.blogspot.com/2012/12/exceptionally-lazy.
 </div>
 </article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/12/05/remap-resharper-keyboard-shortcuts/">
-		
-			Remap Resharper Keyboard Shortcuts</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-05T00:00:00-05:00" pubdate data-updated="true">Dec 5<span>th</span>, 2012</time></div>
-      <div class="tags">Tags: 
-
-</div>
-    </div>
-		<div class='post'>
-<span style="font-family: Arial, Helvetica, sans-serif;">I recently spent 20 minutes figuring this out, so hopefully someone googling will be able to figure it out faster.</span><br /><div><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span></div><div><span style="font-family: Arial, Helvetica, sans-serif;">Using Resharper in Visual Studio 2010, I want to see the implementation of a method way more often than I want to see it&#8217;s definition. </span><span style="font-family: Courier New, Courier, monospace;">Ctrl +B</span><span style="font-family: Arial, Helvetica, sans-serif;"> will take you to the definition, but if you use lots of interfaces this command is less helpful. </span><span style="font-family: Courier New, Courier, monospace;">Ctrl + Shift + Alt + B</span><span style="font-family: Arial, Helvetica, sans-serif;"> will take you to the implementation of that method, where the business logic lives.</span></div><div><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span></div><div><span style="font-family: Arial, Helvetica, sans-serif;">So here&#8217;s how to replace GotoDefinition with GotoImplentation:</span></div><div><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span></div><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-kSTPtKI5TVs/UL-_7lKZq9I/AAAAAAAAAdY/-rt5dHN-v1w/s1600/goto_declaration.PNG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><span style="font-family: Arial, Helvetica, sans-serif;"><img border="0" height="189" src="http://2.bp.blogspot.com/-kSTPtKI5TVs/UL-_7lKZq9I/AAAAAAAAAdY/-rt5dHN-v1w/s320/goto_declaration.PNG" width="320" /></span></a></div><div><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span></div><div><ol><li><span style="font-family: Arial, Helvetica, sans-serif;">Open Tools -&gt; Options -&gt; Environment -&gt; Keyboard.</span></li><li><span style="font-family: Arial, Helvetica, sans-serif;">Under &#8220;Show commands containing:&#8221; type&nbsp;</span><span style="font-family: Courier New, Courier, monospace;">Resharper.Resharper_GotoDefinition</span><span style="font-family: Arial, Helvetica, sans-serif;">. Press the Remove button. Now search for&nbsp;</span><span style="font-family: Courier New, Courier, monospace;">Resharper.Resharper_GotoImplementation</span><span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;and do the same thing.</span></li><li><span style="font-family: Arial, Helvetica, sans-serif;">Under &#8220;Press shortcut keys,&#8221; press </span><span style="font-family: Courier New, Courier, monospace;">Ctrl + B</span><span style="font-family: Arial, Helvetica, sans-serif;">. Press the Assign button.</span></li><li><span style="font-family: Arial, Helvetica, sans-serif;">If you&#8217;d still like a shortcut for GotoDefinition, search again for&nbsp;</span><span style="font-family: Courier New, Courier, monospace;">Resharper.Resharper_GotoDefinition</span><span style="font-family: Arial, Helvetica, sans-serif;">, and follow step 3, this time pressing </span><span style="font-family: Courier New, Courier, monospace;">Ctrl + Shift + Alt + B</span><span style="font-family: Arial, Helvetica, sans-serif;">.</span></li><li><span style="font-family: Arial, Helvetica, sans-serif;">Press OK. You&#8217;re all set.</span></li></ol></div><div><span style="font-family: Arial, Helvetica, sans-serif;">UPDATE: 12/6</span><br /><span style="font-family: Arial, Helvetica, sans-serif;"><br /></span><span style="font-family: Arial, Helvetica, sans-serif;">A friend Andreas had the following to add:</span><br /><br /><br /><div class="MsoNormal"><span lang="EN-GB" style="color: #1f497d; mso-ansi-language: EN-GB;"><span style="font-family: Arial, Helvetica, sans-serif;">Just two comments on the key sequence: We’ve actually got a term here in London for the Ctrl + Shift + Alt, because it’s such a mouthful when you’re trying to communicate it to someone who you’re pairing with. We call it (I kid you not) “banana”, cause, you know, the keys are kinda arranged in that shape. So you do occasionally hear people say things like “Banana – B” when coding. <o:p></o:p></span></span></div><div class="MsoNormal"><br /></div><div class="MsoNormal"><span lang="EN-GB" style="color: #1f497d; mso-ansi-language: EN-GB;"><span style="font-family: Arial, Helvetica, sans-serif;">On the topic of bananas – there’s a surprisingly little known shortcut in Resharper. Banana – A over a variable or parameter lets you trace the value origin or destination. So if you’re trying to find out where a parameter actually gets set (or which possible entry points you need to follow), rather than repeatedly following the chains with Alt+F7s or Ctrl-Bs. If you haven’t used it before give it a spin, makes tracing this stuff a lot less tedious.</span><o:p></o:p></span></div></div></div>
-
-		
-		
-	</div>
-
-<div class="meta">
-	
-</div>
-</article>
-
 <nav id="pagenavi">
     
         <a href="/" class="prev">Prev</a>
     
+    
+        <a href="/blog/page/3/" class="next">Next</a>
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav>

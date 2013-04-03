@@ -4,7 +4,7 @@
   <title><![CDATA[Test Driven Domination]]></title>
   <link href="http://www.testdrivendomination.com/atom.xml" rel="self"/>
   <link href="http://www.testdrivendomination.com/"/>
-  <updated>2013-02-18T12:38:25-05:00</updated>
+  <updated>2013-04-03T10:50:11-04:00</updated>
   <id>http://www.testdrivendomination.com/</id>
   <author>
     <name><![CDATA[Joe Leo]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[More Than Skim Milk Agile]]></title>
+    <link href="http://www.testdrivendomination.com/blog/2013/04/02/ken-schwaber-at-philly-ete/"/>
+    <updated>2013-04-02T16:29:00-04:00</updated>
+    <id>http://www.testdrivendomination.com/blog/2013/04/02/ken-schwaber-at-philly-ete</id>
+    <content type="html"><![CDATA[<p><em>I&#8217;m writing a little about my experiences at <a href="http://phillyemergingtech.com">Philly ETE 2013</a>. This is a great conference where people can get a little taste of everything development related.</em></p>
+
+<h3>The Path to Agility - Ken Schwaber</h3>
+
+<p>The goal of this talk is to get us on the path to agility. I&#8217;m here because I&#8217;m interested in getting my team more agile.  We&#8217;re <a href="http://www.nbcnews.com/video/nbc-news/51351332#51351332">&#8220;skim milk&#8221; agile</a> right now. I came to this talk believing our agility is a subjectively measured goal. Ken has a different take.</p>
+
+<p>First, a little background on Agile. XP started becoming dominant in 1998, Agile Manifesto 2001. Scrum has been around 25 years! And an endorsement for XP: &#8220;If you&#8217;re not using XP you have to come up with something <strong>like</strong> XP.&#8221; Ken is happy with the state of Agile and is concerned about its future. In short, it can&#8217;t become a passing craze.</p>
+
+<p>One definition of Agile is &#8220;to take control of opportunities and respond to challenges while controlling risk.&#8221; I wonder how much we pay attention to our risk? What are the risks we face, and how do ideas like introducing Scala impact that factor?</p>
+
+<p>One observation, from Harvard Business Review, is that changing an organization to follow Agile has about a 30% success rate and can take up to 7 years. Ken says that he&#8217;s observed companies get to a highly successful Agile state in two or three years and has subsequently seen them revert back to old practices. Why does this happen?</p>
+
+<p>This talk is making me wonder just how agile my team is. In what areas can we be better? We&#8217;re going to start addressing planning and info radiators soon. Is this the best place to start? I&#8217;m not sure. I think the most important thing, right now, is to start somewhere.</p>
+
+<p>We&#8217;re now talking about TDD, BDD, tech debt. OK, but when are we getting to the Path? Ken&#8217;s suggestion is to measure your agility using any or all of these.</p>
+
+<ul>
+<li>total defects</li>
+<li>time to get a small change to a customer</li>
+<li>stabilization time for releases</li>
+<li>frequency of releases</li>
+</ul>
+
+
+<p>These are just a few that he mentioned, the most relevant for my team (and for my role, as I don&#8217;t have access to the budget). I&#8217;d like to know how to measure these. Total defects is easy. I&#8217;m happy to say that&#8217;s not a high number but it could always be improved. &#8220;Small change&#8221; is a slippery term, and it will vary from code base to code base.</p>
+
+<p>But we release every week on a schedule and the time to stabilize a release is measured in minutes, not months. So we&#8217;re good, right? Not so much. There&#8217;s much more to be done and improved upon. We&#8217;re &#8220;skim milk&#8221; Agile, and I&#8217;m left wanting. Although this talk did not convince me of a definite path forward, it has impressed upon me the need to measure something and improve an objective metric.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Git-Svn: For People Who Won't Let Go of Git]]></title>
