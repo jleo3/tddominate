@@ -4,7 +4,7 @@
   <title><![CDATA[Test Driven Domination]]></title>
   <link href="http://www.testdrivendomination.com/atom.xml" rel="self"/>
   <link href="http://www.testdrivendomination.com/"/>
-  <updated>2013-04-03T10:50:11-04:00</updated>
+  <updated>2013-04-03T12:38:16-04:00</updated>
   <id>http://www.testdrivendomination.com/</id>
   <author>
     <name><![CDATA[Joe Leo]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Go Programming]]></title>
+    <link href="http://www.testdrivendomination.com/blog/2013/04/03/go-programming/"/>
+    <updated>2013-04-03T12:25:00-04:00</updated>
+    <id>http://www.testdrivendomination.com/blog/2013/04/03/go-programming</id>
+    <content type="html"><![CDATA[<p>Why are there Go Programmers? - Blake Mizerany</p>
+
+<p>Want to know what Go programmers look like? Here&#8217;s one:
+[shahid pic]</p>
+
+<p>Look! Here&#8217;s another one:
+[dix pic]</p>
+
+<p>Coming into this talk all I know about Go is that a couple of people I trust have found it suitable for their recent production applications. Here I&#8217;m hoping to learn much more. After all, there&#8217;s still time for me to abandon this whole &#8220;learning Scala&#8221; thing (wink).</p>
+
+<p>So far I like the idea of the language being built by an impressive team of engineers and it&#8217;s promise of super-fast compile times. Blake hasn&#8217;t been this excited about a language in over a decade. So that&#8217;s something.</p>
+
+<p>Go is defined in UTF-8 and thus supports it 100%. Cool things:</p>
+
+<ul>
+<li>Benchmarking tools</li>
+<li>Concurrency primitives</li>
+<li>Functional aspects</li>
+<li>Fast as a feature</li>
+<li>Simplicity</li>
+<li>Testing tools</li>
+<li>Statically linked binaries mean that everything compiles down to machine code, not to a vm.</li>
+</ul>
+
+
+<p>This presentation software is a Go program! Well, holy crap. And I just found out that I am need of some presentation software!
+godoc.org/code.google.com/p/go.talks/pkg/present</p>
+
+<p>go fmt - the answer to code formatting arguments. Just run it against your source and then check the code in. go fmt will format your code according to the standard.</p>
+
+<p>The testing library seams very cool in that it regression tests the examples in one&#8217;s documentation. This can keep you sane and keep your APIs honest.</p>
+
+<p>The language is easy to follow, terse but expressive. The approach (at least in Blake&#8217;s example) reminds me of the virtues extolled in Clojure. The minimal syntax also gives Go a functional feel.</p>
+
+<p>I like Blake&#8217;s stance on Go, coming from the context as the creator of Sinatra. He says that he used to love DSLs and beautiful code but now has a greater love for simplicity and speed. It&#8217;s interesting (and accurate) that these principles can be trade-offs for one another.</p>
+
+<p>Where is Go going? One goal is for its HTTP library to be the most complete HTTP library. Goroutines are one way that HTTP programming is effective in Go. Goroutines are lightweight threads that start small and grow and shrink as needed. These are managed by the Go language, which means millions of them could be allocated under the hood depending on memory and compute resources of your system. But the Go programmer doesn&#8217;t have to worry about it - just run your program and the goroutines will manage themselves.</p>
+
+<p>Blake says that he uses Go for plenty of systems programming but stays with it when creating web services and web frontends. He finds the language versatile enough to move through various programming problems. But first it&#8217;s important to understand the language and the &#8220;accent&#8221; of Go.</p>
+
+<p>This looks like an interesting language surrounded by an intellectual community. I&#8217;m going to do some more poking around and see if I get myself lured in.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[More Than Skim Milk Agile]]></title>
