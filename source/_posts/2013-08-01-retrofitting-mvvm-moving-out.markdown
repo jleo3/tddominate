@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Retrofitting MVVM: Moving Out"
 date: 2013-08-01 08:49

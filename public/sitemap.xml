@@ -34,19 +34,31 @@
     </url>
     <url>
         <loc>http://www.testdrivendomination.com/blog/2013/04/02/ken-schwaber-at-philly-ete/</loc>
-        <lastmod>2013-04-03T10:48:33-04:00</lastmod>
+        <lastmod>2013-08-05T21:50:35-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.testdrivendomination.com/blog/2013/08/01/retrofitting-mvvm-moving-out/
+        </loc>
+        <lastmod>2013-08-05T21:53:27-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.testdrivendomination.com/blog/2013/08/02/use-automocking-to-mop-up-your-specs/
+        </loc>
+        <lastmod>2013-08-05T21:50:35-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.testdrivendomination.com/archives/</loc>
-        <lastmod>2013-04-03T10:48:33-04:00</lastmod>
+        <lastmod>2013-08-05T21:53:27-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.testdrivendomination.com/</loc>
-        <lastmod>2013-04-03T10:48:33-04:00</lastmod>
+        <lastmod>2013-08-05T21:53:27-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.testdrivendomination.com/blog/archives/</loc>
-        <lastmod>2013-04-03T10:48:33-04:00</lastmod>
+        <lastmod>2013-08-05T21:53:27-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.testdrivendomination.com/robots.txt</loc>

@@ -3,10 +3,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Test Driven Domination</title>
+	<title>Use Automocking to Mop Up Your Specs - Test Driven Domination</title>
     <meta name="author" content="Joe Leo">
     
-	<meta name="description" content="Published on: Aug 2nd, 2013 Tags: I&#8217;m big on mocking. I create loads of interfaces and I test up against my interfaces. That&#8217;s how I &hellip;">
+	<meta name="description" content="I&#8217;m big on mocking. I create loads of interfaces and I test up against my interfaces. That&#8217;s how I define unit tests. I understand there &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -98,36 +98,9 @@
 <div id="toload">
 <!-- begin toload --> 
     <div id="content" class="inner">
-        
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/08/02/use-automocking-to-mop-up-your-specs/">
-		
-			Use Automocking to Mop Up Your Specs</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-02T15:17:00-04:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-</div>
-    </div>
-		<p>I&#8217;m big on mocking. I create loads of interfaces and I test up against my interfaces. That&#8217;s how I define unit tests. I understand there are plenty of other definitions out there, and many of them have merit. This one helps me to stay organized.</p>
+        <article class="post">
+	<h2 class="title">Use Automocking to Mop Up Your Specs</h2>
+	<div class="entry-content"><p>I&#8217;m big on mocking. I create loads of interfaces and I test up against my interfaces. That&#8217;s how I define unit tests. I understand there are plenty of other definitions out there, and many of them have merit. This one helps me to stay organized.</p>
 
 <p>This also leads to loads of setup in my MSpec files:</p>
 
@@ -236,137 +209,30 @@
 
 
 <p>Nice and easy, and much cleaner.</p>
-
-		
-		
-	</div>
+</div>
 
 <div class="meta">
 	
 </div>
 </article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/08/01/retrofitting-mvvm-moving-out/">
-		
-			Retrofitting MVVM: Moving Out</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-01T08:49:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-</div>
-    </div>
-		<p>Last week I discovered that I&#8217;ve been lying to myself. I told myself for almost a year that I was making my application conform to the MVVM framework. I was not. Not by a wide margin. I suspected this, then had <a href="http://stackoverflow.com/questions/17845668/how-do-i-reduce-dependencies-in-my-bloated-wpf-mainwindow">StackOverflow confirm it</a>.</p>
-
-<p>After dusting myself off, I decided change was needed. It&#8217;s one thing to decide against using an MVVM framework, a decision my team made a long time before things got so big and complicated.(My friend and former colleague, Moss Collum, had the best words of wisdom for me when I lamented my architectural state on Twitter:
-@jleo3:
-@moss:</p>
-
-<p>)</p>
-
-<p> But in our case we&#8217;ve transgressed against known effective patterns of .NET development. Reparations must be made. So I started looking into ways to change. I watched an excellent talk by Rob Eisenberg called <a href="http://channel9.msdn.com/events/MIX/MIX10/EX15">&#8220;Build Your Own MVVM Framework&#8221;</a>. I read, and I experimented. Then I came up with a plan.</p>
-
-<p> The first problem comes with our windows. We have three types of windows that the user can load, each with its own nested WinForms grid. One of the views is a &#8220;master&#8221; view. The other two views can be launched from the master view. One is a detail view and the other is a scenario view. We use AutoFac for dependency injection, but we overloaded our code-behinds with dependencies - mostly ViewModels - instead of using one ViewModel to rule them all.</p>
-
-<p> I know that a code-behind with lots of dependencies and logic is probably the most egregious of our sins. I also know that moving away from this will give us two advantages: first, it will allow us to have a proper ViewModel per view which can control everything. This sets us up for MVVM retrofitting. Second, extracting this mess by hand will help me to see the common functionality being duplicated across my three windows.</p>
-
-		
-		
-	</div>
-
-<div class="meta">
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/04/02/ken-schwaber-at-philly-ete/">
-		
-			More Than Skim Milk Agile</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-02T16:29:00-04:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-</div>
-    </div>
-		<p><em>I&#8217;m writing a little about my experiences at <a href="http://phillyemergingtech.com">Philly ETE 2013</a>. This is a great conference where people can get a little taste of everything development related.</em></p>
-
-<h3>The Path to Agility - Ken Schwaber</h3>
-
-<p>The goal of this talk is to get us on the path to agility. I&#8217;m here because I&#8217;m interested in getting my team more agile.  We&#8217;re <a href="http://www.nbcnews.com/video/nbc-news/51351332#51351332">&#8220;skim milk&#8221; agile</a> right now. I came to this talk believing our agility is a subjectively measured goal. Ken has a different take.</p>
-
-<p>First, a little background on Agile. XP started becoming dominant in 1998, Agile Manifesto 2001. Scrum has been around 25 years! And an endorsement for XP: &#8220;If you&#8217;re not using XP you have to come up with something <strong>like</strong> XP.&#8221; Ken is happy with the state of Agile and is concerned about its future. In short, it can&#8217;t become a passing craze.</p>
-
-<p>One definition of Agile is &#8220;to take control of opportunities and respond to challenges while controlling risk.&#8221; I wonder how much we pay attention to our risk? What are the risks we face, and how do ideas like introducing Scala impact that factor?</p>
-
-<p>One observation, from Harvard Business Review, is that changing an organization to follow Agile has about a 30% success rate and can take up to 7 years. Ken says that he&#8217;s observed companies get to a highly successful Agile state in two or three years and has subsequently seen them revert back to old practices. Why does this happen?</p>
-
-<p>This talk is making me wonder just how agile my team is. In what areas can we be better? We&#8217;re going to start addressing planning and info radiators soon. Is this the best place to start? I&#8217;m not sure. I think the most important thing, right now, is to start somewhere.</p>
-
-<p>We&#8217;re now talking about TDD, BDD, tech debt. OK, but when are we getting to the Path? Ken&#8217;s suggestion is to measure your agility using any or all of these.</p>
-
-<ul>
-<li>total defects</li>
-<li>time to get a small change to a customer</li>
-<li>stabilization time for releases</li>
-<li>frequency of releases</li>
-</ul>
-
-
-<p>These are just a few that he mentioned, the most relevant for my team (and for my role, as I don&#8217;t have access to the budget). I&#8217;d like to know how to measure these. Total defects is easy. I&#8217;m happy to say that&#8217;s not a high number but it could always be improved. &#8220;Small change&#8221; is a slippery term, and it will vary from code base to code base.</p>
-
-<p>But we release every week on a schedule and the time to stabilize a release is measured in minutes, not months. So we&#8217;re good, right? Not so much. There&#8217;s much more to be done and improved upon. We&#8217;re &#8220;skim milk&#8221; Agile, and I&#8217;m left wanting. Although this talk did not convince me of a definite path forward, it has impressed upon me the need to measure something and improve an objective metric.</p>
-
-		
-		
-	</div>
-
-<div class="meta">
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
 	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
-</article>
 
-<nav id="pagenavi">
-    
-    
-        <a href="/blog/page/2/" class="next">Next</a>
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav>
+
 
     </div>
     <footer id="footer">
