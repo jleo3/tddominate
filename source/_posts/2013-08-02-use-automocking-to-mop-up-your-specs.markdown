@@ -10,28 +10,7 @@ I'm big on mocking. I create loads of interfaces and I test up against my interf
 
 This also leads to loads of setup in my MSpec files:
 
-```
-    class ScenarioWindowViewModelSpecs : WithFakes
-    {
-        protected static IClientPipeline IClientPipeline;
-        protected static IViewportGridViewModel IViewportGridViewModel;
-        protected static IPipelineCollectionViewModel<IPipelineViewport> IPipelineCollectionViewModel;
-        protected static IGridSettingsViewModel IGridSettingsViewModel;
-        protected static ScenarioWindowViewModel ScenarioWindowViewModel;
-            
-        Establish context = () =>
-            {
-                IClientPipeline = An<IClientPipeline>();
-                IViewportGridViewModel = An<IViewportGridViewModel>();
-                IPipelineCollectionViewModel = An<IPipelineCollectionViewModel<IPipelineViewport>>();
-                IGridSettingsViewModel = An<IGridSettingsViewModel>();
-
-                ScenarioWindowViewModel = new ScenarioWindowViewModel(IClientPipeline, IViewportGridViewModel,
-                                                                      IPipelineCollectionViewModel,
-                                                                      IGridSettingsViewModel);
-            }; 
-    }
-```
+{% gist 6169321 %}
 
 This class is my setup. My other specs extend this class, reducing some of the noise:
 

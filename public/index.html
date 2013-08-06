@@ -131,46 +131,8 @@
 
 <p>This also leads to loads of setup in my MSpec files:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>class ScenarioWindowViewModelSpecs : WithFakes
-</span><span class='line'>{
-</span><span class='line'>    protected static IClientPipeline IClientPipeline;
-</span><span class='line'>    protected static IViewportGridViewModel IViewportGridViewModel;
-</span><span class='line'>    protected static IPipelineCollectionViewModel&lt;IPipelineViewport&gt; IPipelineCollectionViewModel;
-</span><span class='line'>    protected static IGridSettingsViewModel IGridSettingsViewModel;
-</span><span class='line'>    protected static ScenarioWindowViewModel ScenarioWindowViewModel;
-</span><span class='line'>        
-</span><span class='line'>    Establish context = () =&gt;
-</span><span class='line'>        {
-</span><span class='line'>            IClientPipeline = An&lt;IClientPipeline&gt;();
-</span><span class='line'>            IViewportGridViewModel = An&lt;IViewportGridViewModel&gt;();
-</span><span class='line'>            IPipelineCollectionViewModel = An&lt;IPipelineCollectionViewModel&lt;IPipelineViewport&gt;&gt;();
-</span><span class='line'>            IGridSettingsViewModel = An&lt;IGridSettingsViewModel&gt;();
-</span><span class='line'>
-</span><span class='line'>            ScenarioWindowViewModel = new ScenarioWindowViewModel(IClientPipeline, IViewportGridViewModel,
-</span><span class='line'>                                                                  IPipelineCollectionViewModel,
-</span><span class='line'>                                                                  IGridSettingsViewModel);
-</span><span class='line'>        }; 
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+<div><script src='https://gist.github.com/6169321.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
 
 
 <p>This class is my setup. My other specs extend this class, reducing some of the noise:</p>
