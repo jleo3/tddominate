@@ -4,7 +4,7 @@
   <title><![CDATA[Test Driven Domination]]></title>
   <link href="http://www.testdrivendomination.com/atom.xml" rel="self"/>
   <link href="http://www.testdrivendomination.com/"/>
-  <updated>2013-08-06T18:27:23-04:00</updated>
+  <updated>2013-08-29T10:54:22-04:00</updated>
   <id>http://www.testdrivendomination.com/</id>
   <author>
     <name><![CDATA[Joe Leo]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Is It Worth It? Learning Opportunities at General Assembly]]></title>
+    <link href="http://www.testdrivendomination.com/blog/2013/08/28/is-it-worth-it-the-learning-opportunities-at-general-assembly/"/>
+    <updated>2013-08-28T21:38:00-04:00</updated>
+    <id>http://www.testdrivendomination.com/blog/2013/08/28/is-it-worth-it-the-learning-opportunities-at-general-assembly</id>
+    <content type="html"><![CDATA[<p>I recently was asked an intriguing question via email. A gentleman was considering enrolling in <a href="https://generalassemb.ly/education/back-end-web-development">Back End Web Development with Rails</a> at <a href="https://generalassemb.ly/">General Assembly</a>. He appealed to me for advice. He learned to code PHP two years ago, has read a couple of books about OOP, and is a regular GitHub contributor. He knows nothing about Ruby or Rails, the subjects of my course. The question, then: This course looks cool, but is it worth it?</p>
+
+<p>As the instructor for the course in question, I&#8217;m aware of my personal leanings. That said, I understand the substantial financial, temporal, and even psychological costs involved. I expect to answer this question often, so I put some thought into my response.</p>
+
+<p>My first course starts in a couple of weeks (last I checked, seats were still available). So I put together an answer having never taught the course before. I&#8217;m interested to see if and how my answer changes. I present my current response here for anyone that&#8217;s interested in General Assembly and is faced with a similar choice. But if you&#8217;re looking for more information, please contact me! I&#8217;m always happy to chat.</p>
+
+<p><img class="center" src="http://www.testdrivendomination.com/images/ga_email.png" width="700" height="700"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Use Automocking to Mop Up Your Specs]]></title>
